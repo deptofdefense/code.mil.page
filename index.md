@@ -51,10 +51,8 @@ xhr.responseType = 'application/json';
 
 xhr.open('GET', 'https://api.github.com/search/repositories?q=topic%3Acode-mil%20pushed%3A%3E2017-03-01&sort=stars&order=desc');
 xhr.onload = function() {
-  debugger;
-  console.log(this.response);
-  body.appendChild(_table_);
+  buildHtmlTable(JSON.parse(this.response).items)
+  document.body.appendChild(_table_);
 };
-
 xhr.send();
 </script>
