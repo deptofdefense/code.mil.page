@@ -1,9 +1,11 @@
 ---
+title: Welcome to Code.mil!
+date: 2017-03-17 02:22:47 Z
+categories:
+- initial
 layout: post
-title:  "Welcome to Code.mil!"
-date:   2017-03-16 22:22:47 -0400
-categories: initial
 ---
+
 Initial post.
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
