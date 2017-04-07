@@ -14,7 +14,7 @@ description: 'DDS is spearheading an effort which will make it easier for DoD to
 
 '
 baseurl: code.mil.page
-url: ''
+url: 
 github_username: deptofdefense
 markdown: kramdown
 theme: minima
