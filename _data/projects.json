@@ -4,12 +4,7 @@
         "apache/accumulo",
         "codice/ddf",
         "deptofdefense/eMCM",
-        "missioncommand/emp3-android",
-        "missioncommand/emp3-web",
         "globus/globus-toolkit",
-        "missioncommand/mil-sym-android",
-        "missioncommand/mil-sym-java",
-        "missioncommand/mil-sym-js",
         "opencpi/opencpi",
         "doughodson/OpenEaagles",
         "di2e/openstorefront",
@@ -20,6 +15,7 @@
     ],
     "GitHubOrganizations":
     [
+        "missioncommand",
         "nationalsecurityagency",
         "ngageoint",
         "ossimlabs",
