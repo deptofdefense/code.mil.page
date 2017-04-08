@@ -16,7 +16,7 @@ description: 'DDS is spearheading an effort which will make it easier for DoD to
   the free and open source communities.
 
 '
-baseurl: /code.mil.page
+baseurl: "/code.mil.page"
 url: 
 github_username: deptofdefense
 markdown: kramdown
