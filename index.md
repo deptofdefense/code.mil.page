@@ -42,13 +42,13 @@ And following is Federal-government-wide policy on source code distribution:
 
 <div class="usa-grid">
 <div class="usa-width-one-half">
+
 <h1>Posts</h1>
 <ul class="post-list">
 {% for post in site.posts %}
   <li>
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span class="post-meta">{{ post.date | date: date_format }}</span>
-
     <h2>
       <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
     </h2>
@@ -61,9 +61,7 @@ And following is Federal-government-wide policy on source code distribution:
 <h1 class="repo-list">Repos</h1>
 <ul>
 {% for repo in site.data.projects.GitHubIndividualProjects %}
-    <li>
-        {{repo}}
-    </li>
+    <li>{{repo}}</li>
 {% endfor %}
 </ul>
 </div>
