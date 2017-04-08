@@ -1,0 +1,17 @@
+---
+---
+
+@font-face {
+    font-family: Nocturno;
+    src: url({{site.baseurl}}{% link css/NocturnoDisplay-Reg.ttf %});
+}
+@font-face {
+    font-family: Karla;
+    src: url({{site.baseurl}}{% link css/karla/Karla-Regular.ttf %});
+}
+body {
+    font-family: Nocturno;
+}
+li {
+    font-family: Karla;
+}
