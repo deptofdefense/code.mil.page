@@ -1,0 +1,3 @@
+[submodule "USWDS-jekyll"]
+	path = USWDS-jekyll
+	url = git@github.com:18f/USWDS-jekyll
