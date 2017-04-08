@@ -41,6 +41,8 @@ And following is Federal-government-wide policy on source code distribution:
 * [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
 
+<div class="usa-grid">
+<div class="usa-width-one-half">
 <h1>Posts</h1>
 <ul class="post-list">
 {% for post in site.posts %}
@@ -54,8 +56,9 @@ And following is Federal-government-wide policy on source code distribution:
   </li>
 {% endfor %}
 </ul>
+</div>
 
-
+<div class="usa-width-one-half">
 <h1 class="repo-list">Repos</h1>
 <ul>
 {% for repo in site.data.projects.GitHubIndividualProjects %}
@@ -64,6 +67,8 @@ And following is Federal-government-wide policy on source code distribution:
     </li>
 {% endfor %}
 </ul>
+</div>
+</div>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 

@@ -23,7 +23,7 @@ markdown: kramdown
 theme: uswds-jekyll
 gems:
 - jekyll-feed
-- uswds-jekyll
 exclude:
 - Gemfile
 - Gemfile.lock
+- USWDS-jekyll
