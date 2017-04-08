@@ -3,7 +3,7 @@ title: Welcome to Code.mil!
 date: 2017-03-17 02:22:47 Z
 categories:
 - initial
-layout: post
+layout: docs
 ---
 
 Initial post.

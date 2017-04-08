@@ -8,4 +8,3 @@ Code.mil is an effort to bring the norms of the free and open software communiti
 
 You can find repositories at:
 
-{% include icon-github.html username="deptofdefense" %}
