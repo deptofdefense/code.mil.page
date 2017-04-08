@@ -20,7 +20,7 @@ baseurl:
 url: 
 github_username: deptofdefense
 markdown: kramdown
-theme: minima
+theme: uswds-jekyll
 gems:
 - jekyll-feed
 exclude:
