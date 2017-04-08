@@ -15,7 +15,7 @@ gem "jekyll", "3.4.2"
 gem "minima", "~> 2.0"
 
 
-gem 'uswds-jekyll', :git => 'https://github.com/18F/uswds-jekyll.git'
+gem 'uswds-jekyll', :path => 'USWDS-jekyll'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
