@@ -22,7 +22,7 @@ github_username: deptofdefense
 markdown: kramdown
 theme: uswds-jekyll
 gems:
-- jekyll-feed
+- jekyll-feed,uswds-jekyll
 exclude:
 - Gemfile
 - Gemfile.lock
