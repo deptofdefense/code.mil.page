@@ -1,0 +1,35 @@
+{
+    "GitHubIndividualProjects":
+    [
+        "apache/accumulo",
+        "codice/ddf",
+        "deptofdefense/eMCM",
+        "globus/globus-toolkit",
+        "opencpi/opencpi",
+        "doughodson/OpenEaagles",
+        "di2e/openstorefront",
+        "radiantbluetechnologies/omar",
+        "risacher/putty-cac/",
+        "RedhawkSDR/redhawk",
+        "virtual-world-framework/vwf"
+    ],
+    "GitHubOrganizations":
+    [
+        "missioncommand",
+        "nationalsecurityagency",
+        "ngageoint",
+        "ossimlabs",
+        "ozoneplatform",
+        "seL4",
+        "SELinuxProject",
+        "usarmyresearchlab"
+    ],
+    "SourceForgeProjects":
+    [
+        "brlcad",
+        "delta3d",
+        "disa-oscimis",
+        "opacity",
+        "wpbdc"
+    ]
+}
