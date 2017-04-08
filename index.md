@@ -52,7 +52,8 @@ xhr.responseType = 'json';
 xhr.open('GET', 'https://api.github.com/search/repositories?q=topic%3Acode-mil%20pushed%3A%3E2017-03-01&sort=stars&order=desc');
 xhr.onload = function() {
   var tmpTable = buildHtmlTable(this.response.items)
-  document.body.appendChild(tmpTable);
+  // TODO: Commenting out for now.
+  // document.body.appendChild(tmpTable);
 };
 xhr.send();
 </script>
