@@ -40,7 +40,6 @@ And following is Federal-government-wide policy on source code distribution:
 * [U.S. Federal Source Code Policy](https://code.gov/#/policy-guide/docs/overview/introduction])
 * [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
-
 <div class="usa-grid">
 <div class="usa-width-one-half">
 <h1>Posts</h1>
