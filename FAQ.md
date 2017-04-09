@@ -1,3 +1,8 @@
+---
+title: FAQ
+layout: page
+---
+
 # Frequently Asked Questions (FAQs)
 
 ## What is Code.mil?
