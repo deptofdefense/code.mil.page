@@ -19,6 +19,9 @@ url:
 github_username: deptofdefense
 markdown: kramdown
 theme: uswds-jekyll
+defaults:
+    - values:
+        layout: "page"
 gems:
 - jekyll-feed
 exclude:
