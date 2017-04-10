@@ -1,6 +1,5 @@
 ---
 title: Code.mil
-layout: page
 ---
 
 # Defense Digital Service Recommendations for Open Source DoD Projects

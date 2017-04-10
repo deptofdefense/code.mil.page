@@ -1,6 +1,5 @@
 ---
 title: FAQ
-layout: page
 ---
 
 # Frequently Asked Questions (FAQs)
