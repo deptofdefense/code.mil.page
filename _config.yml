@@ -21,5 +21,6 @@ markdown: kramdown
 theme: uswds-jekyll
 gems:
 - jekyll-feed
+- uswds-jekyll
 exclude:
 - USWDS-jekyll
