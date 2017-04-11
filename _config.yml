@@ -19,9 +19,9 @@ url:
 github_username: deptofdefense
 markdown: kramdown
 theme: uswds-jekyll
-defaults:
-    - values:
-        layout: "page"
+gems:
+- jekyll-feed
+- uswds-jekyl
 sass:
   # loading path from site root
   # default to _sass
@@ -33,10 +33,3 @@ sass:
   # on a typical twitter bootstrap stats are :
   # nested 138,7kB, compact 129,1kB, expanded 135,9 kB, compressed 122,4 kB
   style: compressed
-gems:
-- jekyll-feed
-exclude:
-- Gemfile
-- Gemfile.lock
-- USWDS-jekyll
-- bower.json

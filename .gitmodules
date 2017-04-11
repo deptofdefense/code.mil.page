@@ -1,6 +1,7 @@
 [submodule "USWDS-jekyll"]
 	path = USWDS-jekyll
 	url = git@github.com:18f/USWDS-jekyll
+	branch = master
 [submodule "_site"]
 	path = _site
 	url = git@github.com:deptofdefense/code.mil.page
