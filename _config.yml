@@ -22,5 +22,4 @@ theme: uswds-jekyll
 gems:
 - jekyll-feed
 exclude:
-- Gemfile.lock
 - USWDS-jekyll
