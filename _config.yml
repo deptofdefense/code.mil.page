@@ -14,14 +14,18 @@ collections:
 email: code@dds.mil
 description: DDS is spearheading an effort which will make it easier for DoD to join
   the free and open source communities.
+defaults:
+    - layout: page
 baseurl: "/code.mil.page"
+defaults:
+    - values:
+        layout: "page"
 url: 
 github_username: deptofdefense
 markdown: kramdown
-theme: uswds-jekyll
+theme: minima
 gems:
 - jekyll-feed
-- uswds-jekyl
 sass:
   sass_dir: bower_components/bootstrap-sass/assets/stylesheets
   style: compressed
