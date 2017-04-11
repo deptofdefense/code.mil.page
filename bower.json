@@ -1,0 +1,21 @@
+{
+  "name": "code.mil.page",
+  "homepage": "x",
+  "authors": [
+    "defensedigitalservice"
+  ],
+  "description": "",
+  "main": "",
+  "license": "x",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
