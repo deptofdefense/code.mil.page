@@ -10,4 +10,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 /*$body-bg: red;*/
 
 /* any style customization must be before the bootstrap import */
-@import "bootstrap";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+/* Bootstrap 4 Card (backported) */
+@import "bootstrap-3-card/sass/card";
