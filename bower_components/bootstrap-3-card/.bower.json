@@ -1,0 +1,38 @@
+{
+  "name": "bootstrap-3-card",
+  "description": "Bootstrap 4 card component, back-ported for Bootstrap 3.",
+  "main": [
+    "sass/_card.scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ],
+  "keywords": [
+    "bootstrap",
+    "card",
+    "sass"
+  ],
+  "authors": [
+    "Martin Bean <martin@martinbean.co.uk>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/martinbean/bootstrap-3-card.git"
+  },
+  "dependencies": {
+    "bootstrap-sass": ">=3.0.0 <4.0.0"
+  },
+  "homepage": "https://github.com/martinbean/bootstrap-3-card",
+  "version": "0.2.0",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "f228130bdaadf686f02cacac5da86546803bedd1"
+  },
+  "_source": "https://github.com/martinbean/bootstrap-3-card.git",
+  "_target": "^0.2.0",
+  "_originalSource": "bootstrap-3-card",
+  "_direct": true
+}
