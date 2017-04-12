@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "bootstrap-3-card": "^0.2.0"
   }
 }
