@@ -18,10 +18,9 @@ baseurl: "/code.mil.page"
 url: 
 github_username: deptofdefense
 markdown: kramdown
-theme: uswds-jekyll
+theme: minima
 gems:
 - jekyll-feed
-- uswds-jekyl
 sass:
   sass_dir: bower_components/bootstrap-sass/assets/stylesheets
   style: compressed
