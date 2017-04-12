@@ -6,18 +6,26 @@
     <title>code.mil</title>
     <link rel="stylesheet" href="css/main.css"/>
     <style>
+.brand {
+  font-size: 3em;
+  text-align: center;
+}
 .title {
   color: white;
   font-size:1.5em;
 }
-nav {
-  padding: 3em;
+#bs-example-navbar-collapse-1 {
+  width: 100%;
   line-height: 2.5em;
+  background-color: #567;
+}
+#bs-example-navbar-collapse-1 > nav {
+  padding: 3em 3em 3em;
 }
 #toggleMenu {
-  position: absolute;
-  left: 1em;
-  top: 1em;
+  position: fixed;
+  left: 0.5em;
+  top: 0.5em;
   z-index: 2;
 }
 @media (min-width: 768px) {
@@ -28,7 +36,16 @@ nav {
 nav ul {
   list-style-type: none;
 }
-.navbar-default,.navbar-default a {
+#brandDiv {
+  text-align: center;
+  background: rgba(0,0,0,0);
+}
+.brand {
+  text-align: center;
+  color: black;
+}
+#bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
+  border: none;
   background-color: #567;
   color: white;
 }
@@ -47,19 +64,20 @@ function toggleBanner(){
     <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </head>
   <body>
-    <!-- Gov banner END -->
+    <div class="navbar-default">
+    <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+      <div class="container-fluid row collapse" id="bs-example-navbar-collapse-1">
     <nav class="navbar navbar-default">
-      <div class="navbar-header">
-          <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-      </div>
-      <div class="navbar-collapse container-fluid row collapse" id="bs-example-navbar-collapse-1">
         <div class="col-sm-4">
-          <a class="title" href="{{site.baseurl}}{% link about.md %}">About code.mil</a>
           <ul>
+            <li>
+              <a class="title" href="{{site.baseurl}}{% link about.md %}">About</a>
+            </li>
             <li>The Primer</li>
             <ul>
               <li>For DOD Employees</li>
@@ -105,8 +123,11 @@ function toggleBanner(){
           </ul>
           <a class="title" href="{{site.baseurl}}{{site.posts.first.url}}">Our Blog</a>
         </div>
-      </div>
     </nav>
+      </div>
+      <div id="brandDiv">
+    <a class="brand" href="{{site.baseurl}}">code.mil</a>
+      </div>
     <main id="main-content">
     {{content}}
     </main>
