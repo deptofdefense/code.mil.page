@@ -27,5 +27,5 @@ theme: minima
 gems:
 - jekyll-feed
 sass:
-  sass_dir: bower_components/bootstrap-sass/assets/stylesheets
+  sass_dir: bower_components
   style: compressed
