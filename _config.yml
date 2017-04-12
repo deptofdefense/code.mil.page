@@ -18,7 +18,6 @@ baseurl: "/code.mil.page"
 url: 
 github_username: deptofdefense
 markdown: kramdown
-theme: minima
 gems:
 - jekyll-feed
 sass:
