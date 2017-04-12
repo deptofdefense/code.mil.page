@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>code.mil</title>
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
     <style>
 /*
 http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
@@ -122,8 +122,8 @@ function toggleBanner(){
   event.preventDefault();
 }
     </script>
-    <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="navbar-default">
@@ -138,7 +138,7 @@ function toggleBanner(){
         <div class="col-sm-4">
           <ul>
             <li>
-              <a class="title" href="{{site.baseurl}}{% link about.md %}">About</a>
+              <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
             </li>
             <li>The Primer</li>
             <ul>
@@ -149,15 +149,15 @@ function toggleBanner(){
           </ul>
         </div>
         <div class="col-sm-4">
-          <a class="title" href="{{site.baseurl}}/projects.html">Community Projects</a>
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">Community Projects</a>
           <ul>
             <li>
-              <a href="{{site.baseurl}}{% link projects.md %}">
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">
                 Featured Projects
               </a>
             </li>
             <li>
-              <a href="{{site.baseurl}}{% link GLOSSARY.md %}">
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link GLOSSARY.md %}">
                 Glossary
               </a>
             </li>
@@ -169,7 +169,7 @@ function toggleBanner(){
           </ul>
         </div>
         <div class="col-sm-4">
-          <a class="title" href="{{site.baseurl}}{% link press.md %}">Our Press</a>
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link press.md %}">Our Press</a>
           <ul>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
@@ -183,12 +183,12 @@ function toggleBanner(){
               </ul>
             </li>
           </ul>
-          <a class="title" href="{{site.baseurl}}{{site.posts.first.url}}">Our Blog</a>
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{site.posts.first.url}}">Our Blog</a>
         </div>
     </nav>
       </div>
       <div id="brandDiv">
-        <a class="brand css3-shadow" href="{{site.baseurl}}">code.mil</a>
+        <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}">code.mil</a>
       </div>
     <main id="main-content">
     {{content}}
