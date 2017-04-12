@@ -80,6 +80,9 @@ nav ul {
   background-color: #567;
   color: white;
 }
+.card-outline-none {
+  border-color:transparent;
+}
     </style>
     <script>
 function toggleBanner(){
@@ -162,31 +165,36 @@ function toggleBanner(){
     <main id="main-content">
     {{content}}
     </main>
-    <footer class="usa-footer usa-footer-medium" role="contentinfo">
-      <div class="usa-footer-secondary_section">
-        <div class="usa-grid">
-          <div class="usa-footer-logo usa-width-one-half">
-            <img class="usa-footer-logo-img" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
-            <h3 class="usa-footer-logo-heading">Defense Digital Service</h3>
-          </div>
-          <div class="usa-footer-contact-links usa-width-one-half">
-            <a class="usa-link-twitter" href="https://twitter.com/DefenseDigital">
+    <div class="container">
+      <div class="card text-center card-outline-none">
+        <div class="col-md-4 col-md-offset-1 card-block">
+          <h4 class="card-title">Defense Digital Service</h4>
+          <p class="card-text">
+            <a class="btn" href="https://twitter.com/DefenseDigital">
               <span>Twitter</span>
             </a>
-            <a class="usa-link-medium" href="https://medium.com/@DefenseDigitalService">
+            <a class="btn" href="https://medium.com/@DefenseDigitalService">
               <span>Medium</span>
             </a>
-            <a class="usa-link-github" href="https://github.com/deptofdefense/">
+            <a class="btn" href="https://github.com/deptofdefense/">
               <span>GitHub</span>
             </a>
-            <address>
-              <h3 class="usa-footer-contact-heading">Contact us</h3>
-              <p><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
-              <p><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
-            </address>
-          </div>
+          </p>
         </div>
+        <div class="col-xs-2 card-block">
+          
+              <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
+         
+        </div>
+        <div class="col-md-4 card-block">
+          <h3 class="card-title">Contact us</h3>
+          <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+          <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
+        </div>
+        <div class="clearfix"> </div>
       </div>
+    </div>
+    <footer class="usa-footer usa-footer-medium" role="contentinfo">
       <!-- Gov banner BEGIN -->
       <div class="panel panel-default">
         <div id="heading" class="panel-heading">
