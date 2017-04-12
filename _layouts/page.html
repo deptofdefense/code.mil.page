@@ -6,6 +6,36 @@
     <title>code.mil</title>
     <link rel="stylesheet" href="css/main.css"/>
     <style>
+/*
+http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
+*/
+ .css3-shadow{
+    display: inline-block;
+    background:#fff;
+    margin: 0px 0px 20px;
+    padding: 30px 30px 10px;
+    text-align:center;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+}
+/*==================================================
+ * Drop shadow effect with box-shadow
+ * ===============================================*/
+.css3-shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
 .brand {
   font-size: 3em;
   text-align: center;
@@ -126,7 +156,7 @@ function toggleBanner(){
     </nav>
       </div>
       <div id="brandDiv">
-    <a class="brand" href="{{site.baseurl}}">code.mil</a>
+        <a class="brand css3-shadow" href="{{site.baseurl}}">code.mil</a>
       </div>
     <main id="main-content">
     {{content}}
