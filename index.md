@@ -88,7 +88,7 @@ And following is Federal-government-wide policy on source code distribution:
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span class="post-meta">{{ post.date | date: date_format }}</span>
     <h2>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+     <a class="post-link" href="{{ site.baseurl}}{% if jekyll.environment == 'staging' %}{% else %}{{ post.url }}{% endif %}">{{ post.title | escape }}</a>
     </h2>
   </li>
 {% endfor %}
