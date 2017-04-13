@@ -54,3 +54,32 @@ sass:
 excludes:
 - Gemfile
 - Gemfile.lock
+'defaults':
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "Ethan"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "projects"
+      type: "pages"
+    values:
+      colors: ["red", "green", "blue"]
+      layout: "project"
+  -
+    scope:
+      path: ""
+      type: "locations"
+    values:
+      map:
+        latitude: 
+        longitude: 
