@@ -2,6 +2,45 @@
 title: Code.mil
 ---
 
+<section class="row">
+<header class="col-md-4 col-md-offset-4">
+Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). THe goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
+</header>
+</section>
+
+<section class="row">
+<div class="card-shadow col-md-4">
+<h2>For active duty and DoD civilian</h2>
+How do I open source my work?<br>
+How can I contribute?
+</div>
+<div class="card-shadow col-md-4">
+<h2>For citizen open source contributors</h2>
+How can I contribute?<br>
+What do I need to know when using an open source DoD project?
+</div>
+<div class="card-shadow col-md-4">
+<h2>For legal professionals & members of the press</h2>
+What kind of work can be open sourced?<br>
+How does this work with DoD policy?<br>
+What are the details of how this works?
+</div>
+</section>
+
+{:.brandDiv .brand style="width:100%"}
+The DoD OSS Directory
+
+<section class="row">
+{% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
+<div class="col-md-5 card col-md-offset-1">
+{{ repo }}
+<br>Lorum Ipsum
+<br>And lots of info.
+<br>And lots of info.
+</div>
+{% endfor %}
+</section>
+
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
 The U.S. Department of Defense faces unique challenges in open sourcing its code. Unlike most software projects, code written by U.S. Federal government employees typically does not have copyright protections under U.S. and some international laws. This can make it hard to attach an open source license to our code. Defense Digital Service offers solutions to these problems.
