@@ -26,64 +26,64 @@
       </button>
       <a class="brand logo" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">Code.mil</a>
     </div>
-      <div class="container-fluid row collapse in" id="bs-example-navbar-collapse-1">
-        <nav class="navbar navbar-default">
-          
-          <div class="col-sm-4">
+    <div class="container-fluid row collapse in" id="bs-example-navbar-collapse-1">
+      <nav class="navbar navbar-default">
+        
+        <div class="col-sm-4">
+          <ul>
+            <li>
+              <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
+            </li>
+            <li>The Primer</li>
             <ul>
-              <li>
-                <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
-              </li>
-              <li>The Primer</li>
-              <ul>
-                <li>For DOD Employees</li>
-                <li>For Citizens</li>
-                <li>For press + legal</li>
+              <li>For DOD Employees</li>
+              <li>For Citizens</li>
+              <li>For press + legal</li>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">Community Projects</a>
+          <ul>
+            <li>
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">
+                Featured Projects
+              </a>
+            </li>
+            <li>
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link GLOSSARY.md %}">
+                Glossary
+              </a>
+            </li>
+            <li>
+              <a href="https://www.dds.mil/">
+                DDS homepage
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link press.md %}">Our Press</a>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
               </ul>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">Community Projects</a>
-            <ul>
-              <li>
-                <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">
-                  Featured Projects
-                </a>
-              </li>
-              <li>
-                <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link GLOSSARY.md %}">
-                  Glossary
-                </a>
-              </li>
-              <li>
-                <a href="https://www.dds.mil/">
-                  DDS homepage
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link press.md %}">Our Press</a>
-            <ul>
-              <li><a href="#">Link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{site.posts.first.url}}">Our Blog</a>
-          </div>
-        </nav>
-      </div>
-      <div class="brandDiv">
-          <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
-      </div>
+            </li>
+          </ul>
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{site.posts.first.url}}">Our Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="brandDiv">
+        <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
+    </div>
     <main id="main-content" class="container">
     {{content}}
     </main>
