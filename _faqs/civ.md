@@ -1,5 +1,6 @@
 ---
 title: FAQs for civilian developers
+layout: default
 ---
 
 1. Thing 1
