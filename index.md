@@ -9,12 +9,11 @@ title: code.mil
 section a {
   color: black;
 }
-.card:hover {
+.panel:hover {
     background: #eee;
 }
 section > .btn {
     margin-bottom: initial;
-    background: #f9f9f9;
 }
 
 </style>
@@ -23,7 +22,7 @@ section > .btn {
 Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
 </header>
 </section>
-<section id="faqs" class="row container-fluid">
+<section id="faqs" class="row">
 <table><tr>
 <td class="css3-shadow col-md-4">
 <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
@@ -56,17 +55,25 @@ What are the details of how this works?
 The DoD OSS Directory
 
 <section class="row">
-<button class="btn btn-default btn-lg col-md-2 col-md-offset-4">Submit a Repo</button>
-<button class="btn btn-default btn-lg col-md-2 col-md-offset-1">View the Catalog</button>
+  <div class="col-md-3 col-md-offset-3">
+  <button class=" col-md-12 btn btn-default btn-lg">Submit a Repo</button>
+  </div>
+  <div class="col-md-3">
+  <button class="col-md-12 btn btn-default btn-lg">View the Catalog</button>
+  </div>
 </section>
 <br>
 <section class="row">
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
-    <div class="col-md-5 card col-md-offset-1 css3-shadow">
-        <h3>{{ repo }}</h3>
-        <br>Lorum Ipsum
-        <br>And lots of info.
-        <br>And lots of info.
+    <div class="col-md-6">
+        <div class="col-md-12 panel panel-default css3-shadow">
+            <h2>{{ repo }}</h2>
+            <div class="panel-body">
+            <br>Lorum Ipsum
+            <br>And lots of info.
+            <br>And lots of info.
+            </div>
+        </div>
     </div>
 {% endfor %}
 </section>
@@ -74,10 +81,10 @@ The DoD OSS Directory
 <br>
 <br>
 <section class="row">
-<div class="col-md-5 col-md-offset-1" style="padding:0;">
+<div class="col-md-6">
 <h2>Recent blog posts</h2>
 {% for post in site.posts %}
-  <div class="card css3-shadow col-md-12">
+  <div class="panel css3-shadow col-md-12">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span class="post-meta">{{ post.date | date: date_format }}</span>
     <h2>
@@ -86,14 +93,14 @@ The DoD OSS Directory
   </div>
 {% endfor %}
 </div>
-<div class="col-md-5 col-md-offset-1" style="padding:0;">
+<div class="col-md-6">
 <h2>In the News</h2>
-{% for post in site.posts %}
-  <div class="card css3-shadow col-md-12">
+{% for post in site.news %}
+  <div class="panel css3-shadow col-md-12">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <span>{{ post.date | date: date_format }}</span>
     <h2>
-     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+     <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
     </h2>
   </div>
 {% endfor %}

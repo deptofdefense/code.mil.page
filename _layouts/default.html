@@ -7,19 +7,20 @@
     <title>code.mil</title>
     <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
     <style>
-body {
-  background: #f9f9f9;
-}
 /*
 http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
 */
+.css3-shadow {
+  background: #f9f9f9;
+}
+.css3-shadow.panel {
+  background: #fff;
+}
  .css3-shadow{
     display: inline-block;
-    background:#f9f9f9;
     margin-bottom: 20px;
-    padding: 30px 30px 10px;
-    text-align:center;
-    position:relative;
+    text-align: center;
+    position: relative;
     -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
     box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
 }
@@ -82,9 +83,6 @@ nav ul {
   border: none;
   background-color: #567;
   color: white;
-}
-.card {
-    background:#fff;
 }
     </style>
     <script>
@@ -169,37 +167,36 @@ function toggleBanner(){
     {{content}}
     </main>
     <section class="container">
-        <div class="col-md-4 card card-block text-center card-outline-none" >
-            <h4 class="card-title">Defense Digital Service</h4>
-            <p class="card-text">
-              <a class="btn" href="https://twitter.com/DefenseDigital">
-                <span>Twitter</span>
-              </a>
-              <a class="btn" href="https://medium.com/@DefenseDigitalService">
-                <span>Medium</span>
-              </a>
-              <a class="btn" href="https://github.com/deptofdefense/">
-                <span>GitHub</span>
-              </a>
-            </p>
+      <div class="col-md-4 panel css3-shadow text-center" >
+        <h4>Defense Digital Service</h4>
+        <p>
+          <a href="https://twitter.com/DefenseDigital">
+            <span>Twitter</span>
+          </a>
+          <a href="https://medium.com/@DefenseDigitalService">
+            <span>Medium</span>
+          </a>
+          <a href="https://github.com/deptofdefense/">
+            <span>GitHub</span>
+          </a>
+        </p>
       </div>
       <div class="col-md-4">
-            <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
+        <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
       </div>
-      <div class="col-md-4 card text-center card-outline-none card-block">
-        <h3 class="card-title">Contact us</h3>
-        <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
-        <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
+      <div class="col-md-4 panel css3-shadow text-center">
+        <h3 >Contact us</h3>
+        <p><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+        <p><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
       </div>
     </section>
-    <footer class="usa-footer usa-footer-medium" role="contentinfo">
+    <footer>
       <!-- Gov banner BEGIN -->
       <div class="panel panel-default">
         <div id="heading" class="panel-heading">
           <img src="https://standards.usa.gov/assets/img/favicons/favicon-57.png" alt="U.S. flag">
           An official website of the United States government
-          <a class="button"
-             onclick="toggleBanner()">
+          <a onclick="toggleBanner()">
             Here’s how you know
             <span id="headerIcon" class="glyphicon glyphicon-menu-down"></span>
           </a>
@@ -207,7 +204,7 @@ function toggleBanner(){
         </div>
         <div class="panel-body container row" hidden=true id="govBanner">
           <div class="col-sm-6">
-            <img src="https://standards.usa.gov/assets/img/icon-dot-gov.svg" alt="Dot gov">
+            <img src="https://standards.usa.gov/assets/img/icon-dot-gov.svg" alt="Dot gov" height="40">
             <div>
               <p>
               <strong>The .gov means it’s official.</strong>
@@ -217,7 +214,7 @@ function toggleBanner(){
             </div>
           </div>
           <div class="col-sm-6">
-            <img src="https://standards.usa.gov/assets/img/icon-https.svg" alt="SSL">
+            <img src="https://standards.usa.gov/assets/img/icon-https.svg" alt="SSL" height="40">
             <div>
               <p>This site is also protected by an SSL (Secure Sockets Layer) certificate that’s been signed by the U.S. government. The <strong>https://</strong> means all transmitted data is encrypted  — in other words, any information or browsing history that you provide is transmitted securely.</p>
             </div>

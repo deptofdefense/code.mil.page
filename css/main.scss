@@ -3,18 +3,16 @@
 
 @charset "utf-8";
 
-/* path to glyphicons */
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 /* custom variable */
-/*$body-bg: red;*/
+$grid-gutter-width: 20px;
+$container-large-desktop: (960px + $grid-gutter-width);
+$body-bg: #f9f9f9;
+$btn-default-bg: $body-bg;
 
 /* any style customization must be before the bootstrap import */
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
-
-
-/* Bootstrap 4 Card (backported) */
-@import "bootstrap-3-card/sass/card";
 
 @font-face {
     font-family: Nocturno;
@@ -25,8 +23,9 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
     src: url({{site.baseurl}}{% link css/karla/Karla-Regular.ttf %});
 }
 body {
+
     font-family: Nocturno;
 }
-li {
+h1,h2,h3,h4 {
     font-family: Karla;
 }
