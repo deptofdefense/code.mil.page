@@ -84,6 +84,10 @@ The DoD OSS Directory
 <div class="col-md-6">
 
 <h2 class="text-center">Recent blog posts</h2>
+<div class="text-center">
+  <a href="blog" class="btn btn-default btn-lg">Blog</a>
+</div>
+<br>
 {% for post in site.posts %}
   <div class="panel panel-default css3-shadow col-md-12">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
@@ -97,6 +101,10 @@ The DoD OSS Directory
 
 <div class="col-md-6">
 <h2 class="text-center">In the News</h2>
+<div class="text-center">
+  <a href="press" class="btn btn-default btn-lg">Press</a>
+</div>
+<br>
 {% for post in site.news %}
   <div class="panel panel-default css3-shadow col-md-12">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
