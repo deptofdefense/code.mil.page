@@ -95,8 +95,6 @@ function toggleBanner(){
   event.preventDefault();
 }
     </script>
-    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="navbar-default">
@@ -222,5 +220,7 @@ function toggleBanner(){
         </div>
       </div>
     </footer>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </body>
 </html>
