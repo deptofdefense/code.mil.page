@@ -33,14 +33,14 @@ How can I contribute?
 </a>
 </td>
 <td class="css3-shadow col-md-4">
-<a>
+<a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/civ.md %}">
 <h2>Citizen contributors</h2>
 How can I contribute?<br>
 What do I need to know when using an open source DoD project?
 </a>
 </td>
 <td class="css3-shadow col-md-4">
-<a>
+<a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/other.md %}">
 <h2>Policy, Legal, and Press</h2>
 What kind of work can be open sourced?<br>
 How does this work with DoD policy?<br>
@@ -62,24 +62,45 @@ The DoD OSS Directory
 <br>
 <section class="row">
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
-<div class="col-md-5 card col-md-offset-1 css3-shadow">
-<h3>{{ repo }}</h3>
-<br>Lorum Ipsum
-<br>And lots of info.
-<br>And lots of info.
-</div>
+    <div class="col-md-5 card col-md-offset-1 css3-shadow">
+        <h3>{{ repo }}</h3>
+        <br>Lorum Ipsum
+        <br>And lots of info.
+        <br>And lots of info.
+    </div>
 {% endfor %}
 </section>
-
+<br>
+<br>
+<br>
 <section class="row">
-<div class="col-md-6 brandDiv">
-<h3 style="width=100%">Recent blog posts</h3>
+<div class="col-md-5 col-md-offset-1" style="padding:0;">
+<h2>Recent blog posts</h2>
+{% for post in site.posts %}
+  <div class="card css3-shadow col-md-12">
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h2>
+     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+    </h2>
+  </div>
+{% endfor %}
 </div>
-<div class="col-md-6 brandDiv">
-<h3 style="width=100%">In the News</h3>
+<div class="col-md-5 col-md-offset-1" style="padding:0;">
+<h2>In the News</h2>
+{% for post in site.posts %}
+  <div class="card css3-shadow col-md-12">
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h2>
+     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+    </h2>
+  </div>
+{% endfor %}
 </div>
-<section>
+</section>
 
+<section markdown="1">
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
@@ -117,33 +138,6 @@ And following is Federal-government-wide policy on source code distribution:
 
 * [U.S. Federal Source Code Policy](https://code.gov/#/policy-guide/docs/overview/introduction])
 * [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
-
-<div class="usa-grid">
-<div class="usa-width-one-half">
-
-<h1>Posts</h1>
-<ul class="post-list">
-{% for post in site.posts %}
-  <li>
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h2>
-     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
-  </li>
-{% endfor %}
-</ul>
-</div>
-
-<div class="usa-width-one-half">
-<h1 class="repo-list">Repos</h1>
-<ul>
-{% for repo in site.data.projects.GitHubIndividualProjects %}
-    <li>{{repo}}</li>
-{% endfor %}
-</ul>
-</div>
-</div>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
