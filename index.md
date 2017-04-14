@@ -82,9 +82,10 @@ The DoD OSS Directory
 <br>
 <section class="row">
 <div class="col-md-6">
-<h2>Recent blog posts</h2>
+
+<h2 class="text-center">Recent blog posts</h2>
 {% for post in site.posts %}
-  <div class="panel css3-shadow col-md-12">
+  <div class="panel panel-default css3-shadow col-md-12">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span class="post-meta">{{ post.date | date: date_format }}</span>
     <h2>
@@ -93,10 +94,11 @@ The DoD OSS Directory
   </div>
 {% endfor %}
 </div>
+
 <div class="col-md-6">
-<h2>In the News</h2>
+<h2 class="text-center">In the News</h2>
 {% for post in site.news %}
-  <div class="panel css3-shadow col-md-12">
+  <div class="panel panel-default css3-shadow col-md-12">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span>{{ post.date | date: date_format }}</span>
     <h2>
