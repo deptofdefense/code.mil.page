@@ -2,7 +2,6 @@
 title: code.mil
 ---
 
-
 <section class="row">
   <header class="col-md-6 col-md-offset-3">
     Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.

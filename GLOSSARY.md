@@ -1,6 +1,7 @@
 ---
 title: Glossary
 ---
+
 <section class="container">
     <div class="panel panel-default css3-shadow">
         <div class="panel-body text-left" markdown="1">
