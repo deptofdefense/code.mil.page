@@ -7,12 +7,15 @@
     <title>code.mil</title>
     <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
     <style>
+body {
+  background: #f9f9f9;
+}
 /*
 http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
 */
  .css3-shadow{
     display: inline-block;
-    background:#fff;
+    background:#f9f9f9;
     margin: 0px 0px 20px;
     padding: 30px 30px 10px;
     text-align:center;
@@ -67,7 +70,7 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
 nav ul {
   list-style-type: none;
 }
-#brandDiv {
+.brandDiv {
   text-align: center;
   background: rgba(0,0,0,0);
 }
@@ -80,37 +83,9 @@ nav ul {
   background-color: #567;
   color: white;
 }
-.card-outline-none {
-  border-color:transparent;
-}
-.card-shadow{
-    display: inline-block;
+.card {
     background:#fff;
-    margin-bottom: 20px;
-    padding: 30px 30px 10px;
-    text-align:center;
-    position:relative;
-    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
 }
-/*==================================================
- * Drop shadow effect with box-shadow
- * ===============================================*/
-.card-shadow:after{
-    content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    bottom:0px;
-    left:10%;
-    right:10%;
-    width:80%;
-    height:50%;
-    -moz-border-radius:100%;
-    border-radius:100%;
-}
-
     </style>
     <script>
 function toggleBanner(){
@@ -187,17 +162,14 @@ function toggleBanner(){
         </div>
     </nav>
       </div>
-      <div id="brandDiv">
+      <div class="brandDiv">
         <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}">code.mil</a>
       </div>
     <main id="main-content" class="container">
     {{content}}
     </main>
-    <div class="container">
-      <div class="card-shadow">
-      <div class="col-md-4 col-md-offset-1">
-        <div class="card text-center card-outline-none">
-          <div class="card-block">
+    <section class="container">
+        <div class="col-md-4 card card-block text-center card-outline-none" >
             <h4 class="card-title">Defense Digital Service</h4>
             <p class="card-text">
               <a class="btn" href="https://twitter.com/DefenseDigital">
@@ -210,27 +182,16 @@ function toggleBanner(){
                 <span>GitHub</span>
               </a>
             </p>
-          </div>
-        </div>
       </div>
-        <div class="col-xs-2">
-          
-              <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
-         
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center card-outline-none">
-            <div class="card-block">
-              <h3 class="card-title">Contact us</h3>
-              <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
-              <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"> </div>
-     </div>
-    </div>
-    <div class="card-shadow">TEST</div>
+      <div class="col-md-4">
+            <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
+      </div>
+      <div class="col-md-4 card text-center card-outline-none card-block">
+        <h3 class="card-title">Contact us</h3>
+        <p class="card-text"><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+        <p class="car-text"><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
+      </div>
+    </section>
     <footer class="usa-footer usa-footer-medium" role="contentinfo">
       <!-- Gov banner BEGIN -->
       <div class="panel panel-default">

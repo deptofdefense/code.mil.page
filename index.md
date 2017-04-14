@@ -32,14 +32,24 @@ The DoD OSS Directory
 
 <section class="row">
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
-<div class="col-md-5 card col-md-offset-1">
-{{ repo }}
+<div class="col-md-5 card col-md-offset-1 card-shadow">
+<h3>{{ repo }}</h3>
 <br>Lorum Ipsum
 <br>And lots of info.
 <br>And lots of info.
 </div>
 {% endfor %}
 </section>
+
+<section class="row">
+<div class="col-md-6 brandDiv">
+<h3 style="width=100%">Recent blog posts</h3>
+</div>
+<div class="col-md-6 brandDiv">
+<h3 style="width=100%">In the News</h3>
+</div>
+<section>
+
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
