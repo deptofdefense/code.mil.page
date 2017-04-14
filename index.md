@@ -12,6 +12,10 @@ section a {
 .card:hover {
     background: #eee;
 }
+section > .btn {
+    margin-bottom: initial;
+    background: #f9f9f9;
+}
 
 </style>
 <section class="row">
@@ -51,6 +55,11 @@ What are the details of how this works?
 {:.brandDiv .brand style="width:100%"}
 The DoD OSS Directory
 
+<section class="row">
+<button class="btn btn-default btn-lg col-md-2 col-md-offset-4">Submit a Repo</button>
+<button class="btn btn-default btn-lg col-md-2 col-md-offset-1">View the Catalog</button>
+</section>
+<br>
 <section class="row">
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
 <div class="col-md-5 card col-md-offset-1 card-shadow">
