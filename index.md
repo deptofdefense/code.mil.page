@@ -77,47 +77,47 @@ The DoD OSS Directory
     </div>
 {% endfor %}
 </section>
-<br>
-<br>
-<br>
+
 <section class="row">
-<div class="col-md-6">
+    <div class="col-md-6">
 
-<h2 class="text-center">Recent blog posts</h2>
-<div class="text-center">
-  <a href="blog" class="btn btn-default btn-lg">Blog</a>
-</div>
-<br>
-{% for post in site.posts %}
-  <div class="panel panel-default css3-shadow col-md-12">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h2>
-     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
-  </div>
-{% endfor %}
-</div>
+        <h2 class="text-center">Recent blog posts</h2>
+        <div class="text-center">
+            <a href="blog" class="btn btn-default btn-lg">Blog</a>
+        </div>
+        <br>
+        {% for post in site.posts %}
+        <div class="panel panel-default css3-shadow col-md-12">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h2>
+            <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+            </h2>
+        </div>
+        {% endfor %}
+    </div>
 
-<div class="col-md-6">
-<h2 class="text-center">In the News</h2>
-<div class="text-center">
-  <a href="press" class="btn btn-default btn-lg">Press</a>
-</div>
-<br>
-{% for post in site.news %}
-  <div class="panel panel-default css3-shadow col-md-12">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span>{{ post.date | date: date_format }}</span>
-    <h2>
-     <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
-  </div>
-{% endfor %}
-</div>
+    <div class="col-md-6">
+        <h2 class="text-center">In the News</h2>
+        <div class="text-center">
+            <a href="press" class="btn btn-default btn-lg">Press</a>
+        </div>
+        <br>
+        {% for post in site.news %}
+        <div class="panel panel-default css3-shadow col-md-12">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            <span>{{ post.date | date: date_format }}</span>
+            <h2>
+            <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+            </h2>
+        </div>
+        {% endfor %}
+    </div>
 </section>
 
-<section markdown="1">
+<section class="row">
+    <div class="panel panel-default css3-shadow">
+        <div class="panel-body text-left" markdown="1">
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
@@ -157,6 +157,12 @@ And following is Federal-government-wide policy on source code distribution:
 * [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+
+
+</div>
+</div>
+</section>
 
 <script>
 var _table_ = document.createElement('table'),
