@@ -6,94 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>code.mil</title>
     <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
-    <style>
-/*
-http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
-*/
-.css3-shadow {
-  background: #f9f9f9;
-}
-.css3-shadow.panel {
-  background: #fff;
-}
- .css3-shadow{
-    display: inline-block;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-}
-/*==================================================
- * Drop shadow effect with box-shadow
- * ===============================================*/
-.css3-shadow:after{
-    content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    bottom:0px;
-    left:10%;
-    right:10%;
-    width:80%;
-    height:50%;
-    -moz-border-radius:100%;
-    border-radius:100%;
-}
-.brand {
-  font-size: 3em;
-  text-align: center;
-}
-.title {
-  color: white;
-  font-size:1.5em;
-}
-#bs-example-navbar-collapse-1 {
-  width: 100%;
-  line-height: 2.5em;
-  background-color: #567;
-}
-#bs-example-navbar-collapse-1 > nav {
-  padding: 3em 3em 3em;
-}
-#toggleMenu {
-  position: absolute;
-  left: 0.5em;
-  top: 0.5em;
-  z-index: 2;
-}
-@media (min-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-}
-nav ul {
-  list-style-type: none;
-}
-.brandDiv {
-  text-align: center;
-  background: rgba(0,0,0,0);
-}
-.brand {
-  text-align: center;
-  color: black;
-}
-#bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
-  border: none;
-  background-color: #567;
-  color: white;
-}
-    </style>
     <script>
-function toggleBanner(){
-  var tmp=document.getElementById('govBanner');
-  !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
-  tmp=document.getElementById('headerIcon');
-  tmp.classList.toggle("glyphicon-menu-down");
-  tmp.classList.toggle("glyphicon-menu-up");
-  event.preventDefault();
-}
+      function toggleBanner(){
+        var tmp=document.getElementById('govBanner');
+        !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
+        tmp=document.getElementById('headerIcon');
+        tmp.classList.toggle("glyphicon-menu-down");
+        tmp.classList.toggle("glyphicon-menu-up");
+        event.preventDefault();
+      }
     </script>
   </head>
   <body>
