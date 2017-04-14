@@ -2,30 +2,51 @@
 title: Code.mil
 ---
 
+<style>
+#faqs > table td[class*="col-"], table th[class*="col-"] {
+  position: relative;
+}
+section a {
+  color: black;
+}
+.card:hover {
+    background: #eee;
+}
+
+</style>
 <section class="row">
-<header class="col-md-4 col-md-offset-4">
-Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). THe goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
+<header class="col-md-6 col-md-offset-3">
+Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
 </header>
 </section>
-
-<section class="row">
-<div class="card-shadow col-md-4">
-<h2>For active duty and DoD civilian</h2>
+<section id="faqs" class="row container-fluid">
+<table><tr>
+<td class="css3-shadow col-md-4">
+<a>
+<h2>Active duty and DoD civilians</h2>
 How do I open source my work?<br>
 How can I contribute?
-</div>
-<div class="card-shadow col-md-4">
-<h2>For citizen open source contributors</h2>
+</a>
+</td>
+<td class="css3-shadow col-md-4">
+<a>
+<h2>Citizen contributors</h2>
 How can I contribute?<br>
 What do I need to know when using an open source DoD project?
-</div>
-<div class="card-shadow col-md-4">
-<h2>For legal professionals & members of the press</h2>
+</a>
+</td>
+<td class="css3-shadow col-md-4">
+<a>
+<h2>Policy, Legal, and Press</h2>
 What kind of work can be open sourced?<br>
 How does this work with DoD policy?<br>
 What are the details of how this works?
-</div>
+</a>
+</td>
+</tr></table>
 </section>
+<br>
+<br>
 
 {:.brandDiv .brand style="width:100%"}
 The DoD OSS Directory
