@@ -109,3 +109,15 @@ nav ul {
   background-color: #567;
   color: white;
 }
+#faqs > table td[class*="col-"], table th[class*="col-"] {
+  position: relative;
+}
+section a {
+  color: black;
+}
+.panel:hover {
+    background: #eee;
+}
+section > .btn {
+    margin-bottom: initial;
+}
