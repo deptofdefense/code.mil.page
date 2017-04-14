@@ -16,7 +16,7 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
  .css3-shadow{
     display: inline-block;
     background:#f9f9f9;
-    margin: 0px 0px 20px;
+    margin-bottom: 20px;
     padding: 30px 30px 10px;
     text-align:center;
     position:relative;
@@ -163,7 +163,7 @@ function toggleBanner(){
     </nav>
       </div>
       <div class="brandDiv">
-        <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}">code.mil</a>
+          <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
       </div>
     <main id="main-content" class="container">
     {{content}}

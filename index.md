@@ -1,5 +1,5 @@
 ---
-title: Code.mil
+title: code.mil
 ---
 
 <style>
@@ -26,7 +26,7 @@ Code.mil is an <strong>experiment in open source</strong> at the U.S. Department
 <section id="faqs" class="row container-fluid">
 <table><tr>
 <td class="css3-shadow col-md-4">
-<a>
+<a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
 <h2>Active duty and DoD civilians</h2>
 How do I open source my work?<br>
 How can I contribute?
@@ -62,7 +62,7 @@ The DoD OSS Directory
 <br>
 <section class="row">
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
-<div class="col-md-5 card col-md-offset-1 card-shadow">
+<div class="col-md-5 card col-md-offset-1 css3-shadow">
 <h3>{{ repo }}</h3>
 <br>Lorum Ipsum
 <br>And lots of info.
@@ -128,7 +128,7 @@ And following is Federal-government-wide policy on source code distribution:
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span class="post-meta">{{ post.date | date: date_format }}</span>
     <h2>
-     <a class="post-link" href="{{ site.baseurl}}{% if jekyll.environment == 'staging' %}{% else %}{{ post.url }}{% endif %}">{{ post.title | escape }}</a>
+     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
     </h2>
   </li>
 {% endfor %}

@@ -11,34 +11,9 @@ collections:
   uploads:
     title: Uploads
     output: true
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: default
-    author: Ethan
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
-- scope:
-    path: projects
-    type: pages
-  values:
-    colors:
-    - red
-    - green
-    - blue
-    layout: project
-- scope:
-    path: ''
-    type: locations
-  values:
-    map:
-      latitude: 
-      longitude: 
+  faqs:
+    title: FAQs
+    output: true
 email: code@dds.mil
 description: DDS is spearheading an effort which will make it easier for DoD to join
   the free and open source communities.
@@ -52,5 +27,6 @@ sass:
   sass_dir: bower_components
   style: compressed
 excludes:
+- bower_components
 - Gemfile
 - Gemfile.lock
