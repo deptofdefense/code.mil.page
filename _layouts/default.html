@@ -6,108 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>code.mil</title>
     <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
-    <style>
-/*
-http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
-*/
-.css3-shadow {
-  background: #f9f9f9;
-}
-.css3-shadow.panel {
-  background: #fff;
-}
- .css3-shadow{
-    display: inline-block;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-}
-/*==================================================
- * Drop shadow effect with box-shadow
- * ===============================================*/
-.css3-shadow:after{
-    content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    bottom:0px;
-    left:10%;
-    right:10%;
-    width:80%;
-    height:50%;
-    -moz-border-radius:100%;
-    border-radius:100%;
-}
-.brand {
-  font-size: 3em;
-  text-align: center;
-}
-.title {
-  color: white;
-  font-size:1.5em;
-}
-#bs-example-navbar-collapse-1 {
-  width: 100%;
-  line-height: 2.5em;
-  background-color: #567;
-}
-#bs-example-navbar-collapse-1 > nav {
-  padding: 3em 3em 3em;
-}
-#toggleMenu {
-  position: absolute;
-  left: 0.5em;
-  top: 0.5em;
-  z-index: 2;
-}
-@media (min-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-}
-nav ul {
-  list-style-type: none;
-}
-.brandDiv {
-  text-align: center;
-  background: rgba(0,0,0,0);
-}
-.brand {
-  text-align: center;
-  color: black;
-}
-#bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
-  border: none;
-  background-color: #567;
-  color: white;
-}
-    </style>
     <script>
-function toggleBanner(){
-  var tmp=document.getElementById('govBanner');
-  !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
-  tmp=document.getElementById('headerIcon');
-  tmp.classList.toggle("glyphicon-menu-down");
-  tmp.classList.toggle("glyphicon-menu-up");
-  event.preventDefault();
-}
+      function toggleBanner(){
+        var tmp=document.getElementById('govBanner');
+        !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
+        tmp=document.getElementById('headerIcon');
+        tmp.classList.toggle("glyphicon-menu-down");
+        tmp.classList.toggle("glyphicon-menu-up");
+        event.preventDefault();
+      }
     </script>
-    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="navbar-default">
-    <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+      <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand logo" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">Code.mil</a>
     </div>
-      <div class="container-fluid row collapse in" id="bs-example-navbar-collapse-1">
-    <nav class="navbar navbar-default">
+    <div class="container-fluid row collapse in" id="bs-example-navbar-collapse-1">
+      <nav class="navbar navbar-default">
+        
         <div class="col-sm-4">
           <ul>
             <li>
@@ -158,17 +79,17 @@ function toggleBanner(){
           </ul>
           <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{site.posts.first.url}}">Our Blog</a>
         </div>
-    </nav>
-      </div>
-      <div class="brandDiv">
-          <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
-      </div>
+      </nav>
+    </div>
+    <div class="brandDiv">
+        <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
+    </div>
     <main id="main-content" class="container">
     {{content}}
     </main>
     <section class="container">
       <div class="col-md-4 panel css3-shadow text-center" >
-        <h4>Defense Digital Service</h4>
+        <h3>Defense Digital Service</h3>
         <p>
           <a href="https://twitter.com/DefenseDigital">
             <span>Twitter</span>
@@ -185,7 +106,7 @@ function toggleBanner(){
         <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="Logo image">
       </div>
       <div class="col-md-4 panel css3-shadow text-center">
-        <h3 >Contact us</h3>
+        <h3>Contact us</h3>
         <p><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
         <p><a href="mailto:feedback@dds.mil">feedback@dds.mil</a></p>
       </div>
@@ -222,5 +143,7 @@ function toggleBanner(){
         </div>
       </div>
     </footer>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </body>
 </html>

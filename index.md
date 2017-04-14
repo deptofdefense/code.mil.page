@@ -2,51 +2,43 @@
 title: code.mil
 ---
 
-<style>
-#faqs > table td[class*="col-"], table th[class*="col-"] {
-  position: relative;
-}
-section a {
-  color: black;
-}
-.panel:hover {
-    background: #eee;
-}
-section > .btn {
-    margin-bottom: initial;
-}
 
-</style>
 <section class="row">
-<header class="col-md-6 col-md-offset-3">
-Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
-</header>
+  <header class="col-md-6 col-md-offset-3">
+    Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
+  </header>
 </section>
 <section id="faqs" class="row">
-<table><tr>
-<td class="css3-shadow col-md-4">
-<a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
-<h2>Active duty and DoD civilians</h2>
-How do I open source my work?<br>
-How can I contribute?
-</a>
-</td>
-<td class="css3-shadow col-md-4">
-<a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/civ.md %}">
-<h2>Citizen contributors</h2>
-How can I contribute?<br>
-What do I need to know when using an open source DoD project?
-</a>
-</td>
-<td class="css3-shadow col-md-4">
-<a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/other.md %}">
-<h2>Policy, Legal, and Press</h2>
-What kind of work can be open sourced?<br>
-How does this work with DoD policy?<br>
-What are the details of how this works?
-</a>
-</td>
-</tr></table>
+  <table><tr>
+    <td class="css3-shadow col-md-4">
+      <div class="panel-body">
+        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
+          <h2>Active duty and DoD civilians</h2>
+          How do I open source my work?<br>
+          How can I contribute?
+        </a>
+      </div>
+    </td>
+    <td class="css3-shadow col-md-4">
+      <div class="panel-body">
+        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/civ.md %}">
+          <h2>Citizen contributors</h2>
+          How can I contribute?<br>
+          What do I need to know when using an open source DoD project?
+        </a>
+      </div>
+    </td>
+    <td class="css3-shadow col-md-4">
+      <div class="panel-body">
+        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/other.md %}">
+          <h2>Policy, Legal, and Press</h2>
+          What kind of work can be open sourced?<br>
+          How does this work with DoD policy?<br>
+          What are the details of how this works?
+        </a>
+      </div>
+    </td>
+  </tr></table>
 </section>
 <br>
 <br>
@@ -56,58 +48,67 @@ The DoD OSS Directory
 
 <section class="row">
   <div class="col-md-3 col-md-offset-3">
-  <button class=" col-md-12 btn btn-default btn-lg">Submit a Repo</button>
+    <button class=" col-md-12 btn btn-default btn-lg">Submit a Repo</button>
   </div>
   <div class="col-md-3">
-  <button class="col-md-12 btn btn-default btn-lg">View the Catalog</button>
+    <button class="col-md-12 btn btn-default btn-lg">View the Catalog</button>
   </div>
 </section>
 <br>
 <section class="row">
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
-    <div class="col-md-6">
-        <div class="col-md-12 panel panel-default css3-shadow">
-            <h2>{{ repo }}</h2>
-            <div class="panel-body">
-            <br>Lorum Ipsum
-            <br>And lots of info.
-            <br>And lots of info.
-            </div>
-        </div>
+  <div class="col-md-6">
+    <div class="col-md-12 panel panel-default css3-shadow">
+      <h2>{{ repo }}</h2>
+      <div class="panel-body">
+      <br>Lorum Ipsum
+      <br>And lots of info.
+      <br>And lots of info.
+      </div>
     </div>
-{% endfor %}
-</section>
-<br>
-<br>
-<br>
-<section class="row">
-<div class="col-md-6">
-<h2>Recent blog posts</h2>
-{% for post in site.posts %}
-  <div class="panel css3-shadow col-md-12">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h2>
-     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
   </div>
 {% endfor %}
-</div>
-<div class="col-md-6">
-<h2>In the News</h2>
-{% for post in site.news %}
-  <div class="panel css3-shadow col-md-12">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span>{{ post.date | date: date_format }}</span>
-    <h2>
-     <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
-  </div>
-{% endfor %}
-</div>
 </section>
 
-<section markdown="1">
+<section class="row">
+  <div class="col-md-6">
+    <h2 class="text-center">Recent blog posts</h2>
+    <div class="text-center">
+        <a href="blog" class="btn btn-default btn-lg">Blog</a>
+    </div>
+    <br>
+    {% for post in site.posts %}
+    <div class="panel panel-default css3-shadow col-md-12">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h2>
+        <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+        </h2>
+    </div>
+        {% endfor %}
+  </div>
+
+  <div class="col-md-6">
+    <h2 class="text-center">In the News</h2>
+    <div class="text-center">
+        <a href="press" class="btn btn-default btn-lg">Press</a>
+    </div>
+    <br>
+    {% for post in site.news %}
+    <div class="panel panel-default css3-shadow col-md-12">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <span>{{ post.date | date: date_format }}</span>
+      <h2>
+      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+      </h2>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="row">
+  <div class="panel css3-shadow">
+  <div class="text-left" markdown="1">
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
@@ -147,6 +148,11 @@ And following is Federal-government-wide policy on source code distribution:
 * [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+    
+  </div>
+  </div>
+</section>
 
 <script>
 var _table_ = document.createElement('table'),
