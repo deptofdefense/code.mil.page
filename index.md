@@ -116,7 +116,7 @@ The DoD OSS Directory
 </section>
 
 <section class="row">
-    <div class="panel panel-default css3-shadow">
+    <div class="panel css3-shadow">
         <div class="panel-body text-left" markdown="1">
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
