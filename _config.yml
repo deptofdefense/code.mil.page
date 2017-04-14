@@ -2,6 +2,12 @@
 title: Code.mil
 timezone: UTC
 collections:
+  faqs:
+    title: FAQs
+    output: true
+  news:
+    title: News
+    output: true
   posts:
     title: Posts
     output: true
@@ -10,12 +16,6 @@ collections:
     output: true
   uploads:
     title: Uploads
-    output: true
-  faqs:
-    title: FAQs
-    output: true
-  news:
-    title: News
     output: true
 email: code@dds.mil
 description: DDS is spearheading an effort which will make it easier for DoD to join
