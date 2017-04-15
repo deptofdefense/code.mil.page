@@ -3,8 +3,11 @@ title: code.mil
 ---
 
 <section class="row">
+<font size="5"> <center> <strong> Free as in freedom </strong> </center> </font><br><br>
+</section>
+<section class="row">
   <header class="col-md-6 col-md-offset-3">
-    Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
+    Code.mil supports <strong>free and open source software development</strong> at the U.S. Department of Defense (DoD). The objective is to produce <strong>better software</strong> for the DoD, the nation, and the world, through <strong> community software development </strong>.
   </header>
 </section>
 <section id="faqs" class="row">
@@ -12,28 +15,30 @@ title: code.mil
     <td class="css3-shadow col-md-4">
       <div class="panel-body">
         <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
-          <h2>Active duty and DoD civilians</h2>
+          <h2>DoD Developers</h2>
           How do I open source my work?<br>
-          How can I contribute?
+          How can I contribute?<br>
+	  How do I accept community contributions?
         </a>
       </div>
     </td>
     <td class="css3-shadow col-md-4">
       <div class="panel-body">
         <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/civ.md %}">
-          <h2>Citizen contributors</h2>
+          <h2>Contributors</h2>
           How can I contribute?<br>
-          What do I need to know when using an open source DoD project?
+          How can I use an open source DoD project?<br>
+	  Why should I contribute?
         </a>
       </div>
     </td>
     <td class="css3-shadow col-md-4">
       <div class="panel-body">
         <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/other.md %}">
-          <h2>Policy, Legal, and Press</h2>
+          <h2>Policy</h2>
           What kind of work can be open sourced?<br>
           How does this work with DoD policy?<br>
-          What are the details of how this works?
+          Why should source code be released?
         </a>
       </div>
     </td>
@@ -111,7 +116,11 @@ The DoD OSS Directory
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
-The U.S. Department of Defense faces unique challenges in open sourcing its code. Unlike most software projects, code written by U.S. Federal government employees typically does not have copyright protections under U.S. and some international laws. This can make it hard to attach an open source license to our code. Defense Digital Service offers solutions to these problems.
+The U.S. Department of Defense faces unique challenges in developing open source software and delivering software to the community. This site assists developers of military software in meeting these challenges safely and efficiently, so they can focus on what counts: solving tough problems for our military, the nation, and the world. This site itself is an open source DoD project led by the Defense Digital Service and supported by a community inside and outside of the DoD. If code.mil doesn't do quite  what you need, then you can help make it better!
+
+Software licensing is one main challenge. Unlike most software projects, code written by U.S. Federal government employees typically does not have copyright protections under U.S. and some international laws. This can make it hard to understand how to attach an open source license to our code. Defense Digital Service offers licensing approaches and strategies for choosing the best license for your project.
+
+Releasing source can also be a major challenge. Procedures for releasing information from many DoD organizations haven't changed much from the days when information took the form of paper reports that traveled by hand from the author, to editors, to the typing pool, and to the supervisory chain of command. Source code is both a written document and a working machine that can create new information and develop furthere in unforeseen ways. This complexity can cause existing information channels to freeze up due to confusion, misunderstandings, and misconceptions. The site provides strategies for this aspect of software release as well. 
 
 Defense Digital Service has technical, legal and administrative resources available to assist U.S. Department of Defense agencies in evaluating its software projects for general release. Please see:
 
@@ -127,24 +136,6 @@ The Defense Digital Service is an agency team of the U.S. Digital Service, which
 ## Get involved
 
 Please see [our GitHub project page](https://github.com/deptofdefense/code.mil/) to participate in updating our recommendations.
-
-## More agency-specific resources for open source and software release policies
-
-* Department of the Army
-  * Research, Development and Engineering Command
-    * Army Research Laboratory
-      * [The U.S. Army Research Laboratory (ARL) Software Release Process for Unrestricted Public Release](https://github.com/USArmyResearchLab/ARL-Open-Source-Guidance-and-Instructions)
-      * [Army Research Laboratory's GitHub organization page](https://github.com/USArmyResearchLab)
-        is the preferred publication location for ARL's projects per
-        [ARL policy](https://github.com/USArmyResearchLab/ARL-Open-Source-Guidance-and-Instructions).
-* General Services Administration
-  * 18F
-    * [18F Open Source Policy](https://github.com/18F/open-source-policy)
-
-And following is Federal-government-wide policy on source code distribution:
-
-* [U.S. Federal Source Code Policy](https://code.gov/#/policy-guide/docs/overview/introduction])
-* [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
