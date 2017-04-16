@@ -71,7 +71,6 @@ The DoD OSS Directory
             </div>
         </div>
     </div>
-  </div>
 {% endfor %}
 </section>
 
@@ -98,6 +97,8 @@ The DoD OSS Directory
      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
     </h2>
   </div>
+  {% endfor %}
+</div>
 </section>
 
 <section class="row">
