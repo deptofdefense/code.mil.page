@@ -2,25 +2,9 @@
 title: code.mil
 ---
 
-<style>
-#faqs > table td[class*="col-"], table th[class*="col-"] {
-  position: relative;
-}
-section a {
-  color: black;
-}
-.panel:hover {
-    background: #eee;
-}
-section > .btn {
-    margin-bottom: initial;
-}
-
-</style>
 <section class="row">
 <header class="col-sm-6 col-sm-offset-3">
-Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
-</header>
+  Code.mil is an <strong>experiment in open source</strong> at the U.S. Department of Defense (DoD). The goal is to <strong>foster open collaboration with the developer community</strong> across the world on DoD open source projects.
 </section>
 <section id="faqs" class="row">
 <table><tr>
@@ -75,11 +59,10 @@ The DoD OSS Directory
             </div>
         </div>
     </div>
+  </div>
 {% endfor %}
 </section>
-<br>
-<br>
-<br>
+
 <section class="row">
 <div class="col-sm-6">
 <h2>Recent blog posts</h2>
@@ -103,11 +86,11 @@ The DoD OSS Directory
      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
     </h2>
   </div>
-{% endfor %}
-</div>
 </section>
 
-<section markdown="1">
+<section class="row">
+  <div class="panel css3-shadow">
+  <div class="text-left" markdown="1">
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
@@ -147,6 +130,11 @@ And following is Federal-government-wide policy on source code distribution:
 * [Enterprise code inventory](https://code.gov/#/policy-guide/docs/compliance/inventory-code)
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+    
+  </div>
+  </div>
+</section>
 
 <script>
 var _table_ = document.createElement('table'),

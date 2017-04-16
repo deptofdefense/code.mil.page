@@ -2,6 +2,10 @@
 title: Glossary
 ---
 
+<section class="container">
+    <div class="panel panel-default css3-shadow">
+        <div class="panel-body text-left" markdown="1">
+
 # Glossary
 
 **Cooperative Research and
@@ -61,3 +65,7 @@ release under this process.
 PD or PDs that serve as contacts for questions regarding the project.  In
 general, all persons listed on the ARL Form 1 as authors will also be POCs for
 the project.
+
+</div>
+</div>
+</section>
