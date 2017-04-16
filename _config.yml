@@ -2,6 +2,9 @@
 title: Code.mil
 timezone: UTC
 collections:
+  assets:
+    title: Assets
+    output: true
   faqs:
     title: FAQs
     output: true

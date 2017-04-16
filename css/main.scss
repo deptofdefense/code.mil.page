@@ -11,16 +11,18 @@ $container-large-desktop: (960px + $grid-gutter-width);
 $body-bg: #f9f9f9;
 $btn-default-bg: $body-bg;
 
+$header-background-color: #567;
+$header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/45-degree-fabric-dark.png %}");
 /* any style customization must be before the bootstrap import */
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 
 @font-face {
     font-family: Nocturno;
-    src: url({{site.baseurl}}{% link css/NocturnoDisplay-Reg.ttf %});
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %});
 }
 @font-face {
     font-family: Karla;
-    src: url({{site.baseurl}}{% link css/karla/Karla-Regular.ttf %});
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/karla/Karla-Regular.ttf %});
 }
 body {
 
@@ -74,7 +76,8 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
 #bs-example-navbar-collapse-1 {
   width: 100%;
   line-height: 2.5em;
-  background-color: #567;
+  background-color: $header-background-color;
+  background-image: $header-background-image;
 }
 #bs-example-navbar-collapse-1 > nav {
   padding: 3em 3em 3em;
@@ -106,7 +109,8 @@ nav ul {
 }
 #bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
   border: none;
-  background-color: #567;
+  background-color: $header-background-color;
+  background-image: $header-background-image;
   color: white;
 }
 #faqs > table td[class*="col-"], table th[class*="col-"] {
