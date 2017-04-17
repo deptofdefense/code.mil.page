@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>code.mil</title>
-    <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
+    <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/bootstrap.scss %}"/>
+    <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.css %}"/>
     <script>
       function toggleBanner(){
         var tmp=document.getElementById('govBanner');
@@ -80,7 +81,7 @@
       </nav>
     </div>
     </div>
-    <div class="text-center">
+    <div class="title text-center">
         <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
     </div>
     <main id="main-content" class="container">
