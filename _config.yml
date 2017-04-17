@@ -35,3 +35,4 @@ exclude:
 - css/bootstrap.scss
 - Gemfile
 - Gemfile.lock
+- README.md
