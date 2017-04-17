@@ -1,5 +1,6 @@
 ---
 title: code.mil
+layout: default
 ---
 
 <section class="row">

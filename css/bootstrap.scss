@@ -13,7 +13,7 @@ $navbar-default-toggle-border-color: rgba(0,0,0,0.0);
 
 $header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/texture.png %}");
 /* any style customization must be before the bootstrap import */
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
 
 #bs-example-navbar-collapse-1 {
   line-height: 2.5em;
