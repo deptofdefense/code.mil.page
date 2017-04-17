@@ -1,3 +1,12 @@
+---
+---
+
+@import "../css/variables.scss";
+$header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/texture.png %}");
+
+#navbar {
+  background-image: $header-background-image;
+}
 @font-face {
     font-family: Nocturno;
     src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %});
@@ -12,16 +21,21 @@ body {
 h1,h2,h3,h4 {
   font-family: Karla;
 }
+#toggleMenu {
+  background-color: $body-bg;
+  position: absolute;
+  left: 5%;
+  top: 1em;
+  z-index: 2;
+}
 /*
 http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
 */
-.css3-shadow {
-  background: #f9f9f9;
-}
 .css3-shadow.panel {
   background: #fff;
 }
  .css3-shadow{
+    background: $body-bg;
     display: inline-block;
     margin-bottom: 35px;
     text-align: center;
@@ -56,8 +70,51 @@ header .title {
   color: white;
   font-size:1.5em;
 }
-.title a:hover {
-  text-decoration: none;
+.title a {
   padding-top: 15px;
   padding-bottom: 5px;
+}
+.title a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+nav ul {
+  list-style-type: none;
+}
+.brand {
+  text-align: center;
+  color: black;
+}
+.logo {
+  margin-left: 60px;
+}
+#faqs > table td[class*="col-"], table th[class*="col-"] {
+  position: relative;
+}
+section a {
+  color: black;
+}
+.panel:hover {
+    background: #eee;
+}
+section > .btn {
+    margin-bottom: initial;
+}
+#navbar nav {
+  padding: 3em 3em 3em;
+}
+#navbar .navbar-default, #navbar .navbar-default a {
+  background-image: $header-background-image;
+  border: none;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-default {
+  background-image: $header-background-image;
+  line-height: 2.5em;
 }

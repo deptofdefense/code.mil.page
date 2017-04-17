@@ -31,7 +31,6 @@ sass:
 include:
 - bower_components
 exclude:
-- css/bootstrap.scss
 - Gemfile
 - Gemfile.lock
 - README.md
