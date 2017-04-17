@@ -77,7 +77,7 @@
               </ul>
             </li>
           </ul>
-          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{site.posts.first.url}}">Our Blog</a>
+          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link blog.md %}">Our Blog</a>
         </div>
       </nav>
     </div>
