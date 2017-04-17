@@ -27,7 +27,7 @@ baseurl: "/code.mil.page"
 url: 
 markdown: kramdown
 sass:
-    sass_dir: bower_components
+  sass_dir: bower_components
 include:
 - bower_components
 exclude:
