@@ -20,9 +20,7 @@
   <body>
     <div class="navbar-default">
       <button type="button" id="toggleMenu" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <img src="{{ "/assets/hamburger.png" | absolute_url }}" alt="Menu" width="20px" /> </span>
       </button>
       <a class="brand logo" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">code.mil</a>
     </div>
