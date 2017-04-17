@@ -31,6 +31,7 @@ sass:
 include:
 - bower_components
 exclude:
+- css/variables.scss
 - Gemfile
 - Gemfile.lock
 - README.md

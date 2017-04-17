@@ -12,34 +12,34 @@ layout: default
 <section id="faqs" class="row">
   <table><tr>
     <td class="css3-shadow col-sm-4">
-      <div class="panel-body">
-        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
+      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/dod.md %}">
+        <div class="panel-body">
           <h2>DoD Developers</h2>
           How do I open source my work?<br>
           How can I contribute?<br>
 	  How do I accept community contributions?
-        </a>
-      </div>
+        </div>
+      </a>
     </td>
     <td class="css3-shadow col-sm-4">
-      <div class="panel-body">
-        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/civ.md %}">
+      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/civ.md %}">
+        <div class="panel-body">
           <h2>Contributors</h2>
           How can I contribute?<br>
           How can I use an open source DoD project?<br>
 	  Why should I contribute?
-        </a>
-      </div>
+        </div>
+      </a>
     </td>
     <td class="css3-shadow col-sm-4">
-      <div class="panel-body">
-        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/other.md %}">
+      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _faqs/other.md %}">
+        <div class="panel-body">
           <h2>Policy</h2>
           What kind of work can be open sourced?<br>
           How does this work with DoD policy?<br>
           Why should source code be released?
-        </a>
-      </div>
+        </div>
+      </a>
     </td>
   </tr></table>
 </section>
