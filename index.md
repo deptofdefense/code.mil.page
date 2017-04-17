@@ -3,12 +3,10 @@ title: code.mil
 ---
 
 <section class="row">
-<font size="5"> <center> <strong> Free as in freedom </strong> </center> </font><br><br>
-</section>
-<section class="row">
-  <header class="col-sm-6 col-smmd-offset-3">
+  <div class="col-sm-6 col-sm-offset-3">
+    <p class="text-center" style="font-weight:bolder; font-size:2em;">Free as in freedom </p>
     Code.mil supports <strong>free and open source software development</strong> at the U.S. Department of Defense (DoD). The objective is to produce <strong>better software</strong> for the DoD, the nation, and the world, through <strong> community software development </strong>.
-  </header>
+  </div>
 </section>
 <section id="faqs" class="row">
   <table><tr>
