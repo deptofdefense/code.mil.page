@@ -11,8 +11,7 @@ $container-large-desktop: (960px + $grid-gutter-width);
 $body-bg: #f9f9f9;
 $btn-default-bg: $body-bg;
 
-$header-background-color: #567;
-$header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/45-degree-fabric-dark.png %}");
+$header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/texture.png %}");
 /* any style customization must be before the bootstrap import */
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -46,7 +45,9 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
     text-align: center;
     position: relative;
     -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
-    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+}
+#faqs .panel-body:hover {
+  box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
 }
 /*==================================================
  * Drop shadow effect with box-shadow
@@ -56,7 +57,7 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
     position:absolute;
     z-index:-1;
     -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
-    box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
     bottom:0px;
     left:10%;
     right:10%;
@@ -74,9 +75,7 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
   font-size:1.5em;
 }
 #bs-example-navbar-collapse-1 {
-  width: 100%;
   line-height: 2.5em;
-  background-color: $header-background-color;
   background-image: $header-background-image;
 }
 #bs-example-navbar-collapse-1 > nav {
@@ -96,10 +95,6 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
 nav ul {
   list-style-type: none;
 }
-.brandDiv {
-  text-align: center;
-  background: rgba(0,0,0,0);
-}
 .brand {
   text-align: center;
   color: black;
@@ -107,11 +102,15 @@ nav ul {
 .logo {
   margin-left: 60px;
 }
+#navbar {
+  background-image: $header-background-image;
+}
 #bs-example-navbar-collapse-1 > .navbar-default,#bs-example-navbar-collapse-1 > .navbar-default a {
   border: none;
-  background-color: $header-background-color;
-  background-image: $header-background-image;
   color: white;
+  background-image: $header-background-image;
+  margin-left: auto;
+  margin-right: auto;
 }
 #faqs > table td[class*="col-"], table th[class*="col-"] {
   position: relative;

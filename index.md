@@ -45,7 +45,7 @@ title: code.mil
 <br>
 <br>
 
-{:.brandDiv .brand style="width:100%"}
+{:.text-center .brand}
 The DoD OSS Directory
 
 <section class="row">
