@@ -27,6 +27,10 @@ baseurl: "/code.mil.page"
 url: 
 markdown: kramdown
 gems:
+sass:
+    sass_dir: bower_components
+include:
+- bower_components
 exclude:
 - css/bootstrap.scss
 - Gemfile
