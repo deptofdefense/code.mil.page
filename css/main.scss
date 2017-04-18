@@ -47,8 +47,9 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
     margin-bottom: 35px;
     position: relative;
     -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
 }
-#faqs a:hover {
+#faqs > table a:hover div {
   box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
 }
 #faqs > table td[class*="col-"], table th[class*="col-"] {
@@ -62,7 +63,7 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
     content:"";
     position:absolute;
     z-index:-1;
-    -webkit-box-shadow:0 0 40px -2px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
     box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
     bottom:0px;
     left:10%;
