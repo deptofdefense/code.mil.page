@@ -30,6 +30,7 @@ sass:
   sass_dir: bower_components
 include:
 - bower_components
+- css/variables.scss
 exclude:
 - Gemfile
 - Gemfile.lock
