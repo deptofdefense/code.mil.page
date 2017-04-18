@@ -1,0 +1,139 @@
+---
+---
+
+@import "../css/variables.scss";
+$header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/texture.png %}");
+
+#navbar {
+  background-image: $header-background-image;
+}
+@font-face {
+    font-family: Nocturno;
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %});
+}
+@font-face {
+    font-family: Karla;
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/karla/Karla-Regular.ttf %});
+}
+body {
+  font-family: Nocturno;
+}
+h1,h2,h3,h4 {
+  font-family: Karla;
+}
+#toggleMenu:not(.collapsed){
+  background: transparent;
+  filter: brightness(20);
+}
+#toggleMenu{
+  background-color: $body-bg;
+  position: absolute;
+  left: 5%;
+  top: 1em;
+  z-index: 2;
+}
+/*
+http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
+*/
+#repos .css3-shadow.panel {
+  height: 15em;
+}
+.css3-shadow.panel {
+  background: #fff;
+}
+ .css3-shadow{
+    background: $body-bg;
+    display: inline-block;
+    margin-bottom: 35px;
+    position: relative;
+    -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+}
+#faqs > table a:hover div {
+  box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
+}
+#faqs > table td[class*="col-"], table th[class*="col-"] {
+  position: relative;
+  text-align: center;
+}
+/*==================================================
+ * Drop shadow effect with box-shadow
+ * ===============================================*/
+.css3-shadow:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
+    box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
+    bottom:0px;
+    left:10%;
+    right:10%;
+    width:80%;
+    height:50%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+.title {
+  font-size: 3em;
+  text-align: center;
+}
+header {
+  color: white;
+  font-size:1.5em;
+}
+.title {
+  text-align: center;
+}
+.title a {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.title a:hover {
+  text-decoration: none;
+}
+.panel-body a:hover {
+  text-decoration: none;
+}
+.panel:hover {
+    background: #eee;
+}
+.panel h2 {
+    overflow: hidden;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}
+nav ul {
+  list-style-type: none;
+}
+a {
+  color: black;
+}
+.btn-default:hover {
+  background-image: $header-background-image;
+  color: white;
+}
+
+
+section > .btn {
+    margin-bottom: initial;
+}
+#navbar nav {
+  padding: 3em 3em 3em;
+}
+#navbar .navbar-default, #navbar .navbar-default a {
+  background-image: $header-background-image;
+  border: none;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-default {
+  background-image: $header-background-image;
+  line-height: 2.5em;
+}

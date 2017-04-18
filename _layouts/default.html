@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>code.mil</title>
+    <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/bootstrap.scss %}"/>
+    <link rel="stylesheet" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link css/main.scss %}"/>
+    <script>
+      function toggleBanner(){
+        var tmp=document.getElementById('govBanner');
+        !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
+        tmp=document.getElementById('headerIcon');
+        tmp.classList.toggle("glyphicon-menu-down");
+        tmp.classList.toggle("glyphicon-menu-up");
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="navbar-default container">
+      <button type="button" id="toggleMenu" class="col-sm-offset-1 navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/hamburger.png %}" alt="Menu" width="20px" /> </span>
+      </button>
+    </div>
+    <div class="" id="navbar">
+    <div class="container collapse in" id="bs-example-navbar-collapse-1">
+      <nav class="navbar navbar-default">
+        
+        <div class="col-sm-4 col-sm-offset-1">
+          <ul>
+            <li>
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
+            </li>
+            <li>The Primer</li>
+            <ul>
+              <li>For DOD Employees</li>
+              <li>For Citizens</li>
+              <li>For press + legal</li>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">Community Projects</a>
+          <ul>
+            <li>
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">
+                Featured Projects
+              </a>
+            </li>
+            <li>
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link GLOSSARY.md %}">
+                Glossary
+              </a>
+            </li>
+            <li>
+              <a href="https://www.dds.mil/">
+                DDS homepage
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link press.md %}">Our Press</a>
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link blog.md %}">Our Blog</a>
+        </div>
+      </nav>
+    </div>
+    </div>
+    <div class="title">
+        <a class="css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
+    </div>
+    <main id="main-content" class="container">
+    {{content}}
+    </main>
+    <section class="container">
+      <div class="col-sm-4 panel css3-shadow text-center" >
+        <h3>Defense Digital Service</h3>
+        <p>
+          <a href="https://twitter.com/DefenseDigital" title="Twitter.com">
+            <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/twitter-64.png %}" alt="Twitter.com" width="48px" /> </span>
+          </a>
+        </p>
+        <p>
+          <a href="https://medium.com/@DefenseDigitalService" title="Medium.com">
+            <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/medium-64.png %}" alt="Medium.com" width="48px" /> </span>
+          </a>
+        </p>
+          <a href="https://github.com/deptofdefense/" title="Github.com">
+            <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/github-64.png %}" alt="Github.com" width="48px" /> </span>
+          </a>
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <a href="https://dds.mil" title="DDS.mil">
+          <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="DDS.mil" />
+        </a>
+      </div>
+      <div class="col-sm-4 panel css3-shadow text-center">
+        <h3>Contact us</h3>
+        <span class="glyphicon glyphicon-envelope" style="color: #b22;font-size: 24px;" aria-hidden="true"></span>
+        <p><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+        <span class="glyphicon glyphicon-inbox" style="color: #369;font-size: 24px;" aria-hidden="true"></span>
+        <p><a href="mailto:feedback@dds.mil" title="Send Email">feedback@dds.mil</a></p>
+      </div>
+    </section>
+    <footer>
+      <!-- Gov banner BEGIN -->
+      <div class="panel panel-default">
+        <div id="heading" class="panel-heading">
+          <img src="https://standards.usa.gov/assets/img/favicons/favicon-57.png" alt="U.S. flag">
+          An official website of the United States government
+          <a onclick="toggleBanner()">
+            Here’s how you know
+            <span id="headerIcon" class="glyphicon glyphicon-menu-down"></span>
+          </a>
+          <span style="background:red;">This site is under construction</span>
+        </div>
+        <div class="panel-body container row" hidden=true id="govBanner">
+          <div class="col-sm-6">
+            <img src="https://standards.usa.gov/assets/img/icon-dot-gov.svg" alt="Dot gov" height="40">
+            <div>
+              <p>
+              <strong>The .gov means it’s official.</strong>
+              <br>
+              Federal government websites always use a .gov or .mil domain. Before sharing sensitive information online, make sure you’re on a .gov or .mil site by inspecting your browser’s address (or “location”) bar.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="https://standards.usa.gov/assets/img/icon-https.svg" alt="SSL" height="40">
+            <div>
+              <p>This site is also protected by an SSL (Secure Sockets Layer) certificate that’s been signed by the U.S. government. The <strong>https://</strong> means all transmitted data is encrypted  — in other words, any information or browsing history that you provide is transmitted securely.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
