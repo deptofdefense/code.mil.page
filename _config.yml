@@ -1,0 +1,37 @@
+---
+title: Code.mil
+timezone: UTC
+collections:
+  assets:
+    title: Assets
+    output: true
+  faqs:
+    title: FAQs
+    output: true
+  news:
+    title: News
+    output: true
+  posts:
+    title: Posts
+    output: true
+  repos:
+    title: Repos
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: code@dds.mil
+description: DDS is spearheading an effort which will make it easier for DoD to join
+  the free and open source communities.
+baseurl: "/code.mil.page"
+url: 
+markdown: kramdown
+sass:
+  sass_dir: bower_components
+include:
+- bower_components
+- css/variables.scss
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
