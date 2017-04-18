@@ -21,7 +21,7 @@
   <body>
     <div class="navbar-default container">
       <button type="button" id="toggleMenu" class="col-sm-offset-1 navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <img src="{{ "/assets/hamburger.png" | absolute_url }}" alt="Menu" width="20px" /> </span>
+        <img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/hamburger.png %}" alt="Menu" width="20px" /> </span>
       </button>
     </div>
     <div class="" id="navbar">
@@ -92,16 +92,16 @@
         <h3>Defense Digital Service</h3>
         <p>
           <a href="https://twitter.com/DefenseDigital" title="Twitter.com">
-            <span><img src="{{ "/assets/twitter-64.png" | absolute_url }}" alt="Twitter.com" width="48px" /> </span>
+            <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/twitter-64.png %}" alt="Twitter.com" width="48px" /> </span>
           </a>
         </p>
         <p>
           <a href="https://medium.com/@DefenseDigitalService" title="Medium.com">
-            <span><img src="{{ "/assets/medium-64.png" | absolute_url }}" alt="Medium.com" width="48px" /> </span>
+            <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/medium-64.png %}" alt="Medium.com" width="48px" /> </span>
           </a>
         </p>
           <a href="https://github.com/deptofdefense/" title="Github.com">
-            <span><img src="{{ "/assets/github-64.png" | absolute_url }}" alt="Github.com" width="48px" /> </span>
+            <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/github-64.png %}" alt="Github.com" width="48px" /> </span>
           </a>
         </p>
       </div>

@@ -94,10 +94,14 @@ function updateRepo(repo){
     if (xhr.readyState !== 4 ) { return }
     var response;
     if (xhr.status == 403) {
-      console.log('Rate limit reached. Using localStorage') }
+      console.log('Rate limit reached. Using localStorage');
       response = JSON.parse(localStorage.getItem(repo));
       if (!response) response = {full_name:repo,description : '',pushed_at:'',language:''};
-    else if (xhr.status !== 200) { repsonse = {full_name:repo,description : '',pushed_at:'',language:''};}
+    }
+    else if (xhr.status !== 200 && xhr.status !== 304) {
+      console.log(xhr.status);
+      response = {full_name:repo,description : '',pushed_at:'',language:''};
+    }
     else {response = xhr.response;}
     addFields(p,response);
     // Cache response
