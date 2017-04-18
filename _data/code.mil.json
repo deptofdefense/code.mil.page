@@ -1,0 +1,15 @@
+[
+    "apache/accumulo",
+    "apache/accumulo.date",
+    "cache",
+    "codice/ddf",
+    "codice/ddf.date",
+    "deptofdefense/eMCM",
+    "deptofdefense/eMCM.date",
+    "doughodson/OpenEaagles",
+    "doughodson/OpenEaagles.date",
+    "globus/globus-toolkit",
+    "globus/globus-toolkit.date",
+    "opencpi/opencpi",
+    "opencpi/opencpi.date"
+]
