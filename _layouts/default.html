@@ -31,7 +31,7 @@
         <div class="col-sm-4 col-sm-offset-1">
           <ul>
             <li>
-              <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
+              <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
             </li>
             <li>The Primer</li>
             <ul>
@@ -42,7 +42,7 @@
           </ul>
         </div>
         <div class="col-sm-4">
-          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">Community Projects</a>
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">Community Projects</a>
           <ul>
             <li>
               <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link projects.md %}">
@@ -62,7 +62,7 @@
           </ul>
         </div>
         <div class="col-sm-3">
-          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link press.md %}">Our Press</a>
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link press.md %}">Our Press</a>
           <ul>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
@@ -76,13 +76,13 @@
               </ul>
             </li>
           </ul>
-          <a class="title" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link blog.md %}">Our Blog</a>
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link blog.md %}">Our Blog</a>
         </div>
       </nav>
     </div>
     </div>
-    <div class="title text-center">
-        <a class="brand css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
+    <div class="title">
+        <a class="css3-shadow" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">{{ page.title }}</a>
     </div>
     <main id="main-content" class="container">
     {{content}}

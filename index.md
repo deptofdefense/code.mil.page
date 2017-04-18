@@ -46,7 +46,7 @@ layout: default
 <br>
 <br>
 
-{:.text-center .brand}
+{:.text-center .title}
 The DoD OSS Directory
 
 <section class="row">
@@ -58,17 +58,62 @@ The DoD OSS Directory
   </div>
 </section>
 <br>
-<section class="row">
+<section class="row" id="repos">
+<script>
+// TODO: Will not scale, need Jenkins or AWS Lambda to update code.json
+function addFields(p,response){
+  var tmp = document.createElement('h2');
+  tmp.innerText = response.full_name;
+  p.appendChild(tmp);
+  var div = document.createElement('div');
+  div.classList.add('panel-body');
+  p.appendChild(div);
+  var array = [response.description
+            ,"Last Updated: " + response.pushed_at.slice(0,9)
+            ,response.language];
+  for (var i=0;i<array.length;i++){
+    tmp = document.createElement('p');
+    tmp.innerText=array[i];
+    div.appendChild(tmp);
+  }
+}
+</script>
+<script>
+// Cache repo info in localStorage
+function updateRepo(repo){
+  var cache = localStorage.getItem(repo + ".date");
+  var p = document.currentScript.parentNode;
+  // 15 min invalidation
+  if (Date.now() - Number.parseInt(cache) < 900 * 1000) {
+    return addFields(p,JSON.parse(localStorage.getItem(repo)));
+  }
+  var xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
+  xhr.open('GET', 'https://api.github.com/repos/' + repo);
+  xhr.onload = function() {
+    if (xhr.readyState !== 4 ) { return }
+    var response;
+    if (xhr.status == 403) {
+      console.log('Rate limit reached. Using localStorage') }
+      response = JSON.parse(localStorage.getItem(repo));
+      if (!response) response = {full_name:repo,description : '',pushed_at:'',language:''};
+    else if (xhr.status !== 200) { repsonse = {full_name:repo,description : '',pushed_at:'',language:''};}
+    else {response = xhr.response;}
+    addFields(p,response);
+    // Cache response
+    localStorage.setItem(repo,JSON.stringify(response));
+    localStorage.setItem(repo + ".date",Date.now());
+  };
+  xhr.send();
+};
+
+value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
+</script>
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
     <div class="col-sm-6">
-        <div class="col-sm-12 panel panel-default css3-shadow">
-            <h2>{{ repo }}</h2>
-            <div class="panel-body">
-            <br>Lorum Ipsum
-            <br>And lots of info.
-            <br>And lots of info.
-            </div>
-        </div>
+        <a href="https://github.com/{{repo}}" class="col-sm-12 panel panel-default css3-shadow">
+            <script>updateRepo("{{repo}}");</script>
+        </a>
     </div>
 {% endfor %}
 </section>
@@ -101,8 +146,7 @@ The DoD OSS Directory
 </section>
 
 <section class="row">
-  <div class="panel css3-shadow">
-  <div class="text-left" markdown="1">
+  <div class="panel css3-shadow" markdown="1">
 
 # Defense Digital Service Recommendations for Open Source DoD Projects
 
@@ -129,63 +173,20 @@ Please see [our GitHub project page](https://github.com/deptofdefense/code.mil/)
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
-    
   </div>
   </div>
 </section>
 
 <script>
-var _table_ = document.createElement('table'),
-    _tr_ = document.createElement('tr'),
-    _th_ = document.createElement('th'),
-    _td_ = document.createElement('td');
-
-// Builds the HTML Table out of myList json data from Ivy restful service.
- function buildHtmlTable(arr) {
-     var table = _table_.cloneNode(false),
-         columns = addAllColumnHeaders(arr, table);
-     for (var i=0, maxi=arr.length; i < maxi; ++i) {
-         var tr = _tr_.cloneNode(false);
-         for (var j=0, maxj=columns.length; j < maxj ; ++j) {
-             var td = _td_.cloneNode(false);
-                 cellValue = arr[i][columns[j]];
-             td.appendChild(document.createTextNode(arr[i][columns[j]] || ''));
-             tr.appendChild(td);
-         }
-         table.appendChild(tr);
-     }
-     return table;
- }
-
- // Adds a header row to the table and returns the set of columns.
- // Need to do union of keys from all records as some records may not contain
- // all records
- function addAllColumnHeaders(arr, table)
- {
-     var columnSet = [],
-         tr = _tr_.cloneNode(false);
-     for (var i=0, l=arr.length; i < l; i++) {
-         for (var key in arr[i]) {
-             if (arr[i].hasOwnProperty(key) && columnSet.indexOf(key)===-1) {
-                 columnSet.push(key);
-                 var th = _th_.cloneNode(false);
-                 th.appendChild(document.createTextNode(key));
-                 tr.appendChild(th);
-             }
-         }
-     }
-     table.appendChild(tr);
-     return columnSet;
- }
+// TODO: Example of a search
 var xhr = new XMLHttpRequest();
 xhr.responseType = 'json';
 
 xhr.open('GET', 'https://api.github.com/search/repositories?q=topic%3Acode-mil%20pushed%3A%3E2017-03-01&sort=stars&order=desc');
 xhr.onload = function() {
-  var tmpTable = buildHtmlTable(this.response.items)
   // TODO: Commenting out for now.
   // document.body.appendChild(tmpTable);
 };
-xhr.send();
+// xhr.send();
 
 </script>

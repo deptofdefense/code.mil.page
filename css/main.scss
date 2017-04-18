@@ -35,6 +35,9 @@ h1,h2,h3,h4 {
 /*
 http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/
 */
+#repos .css3-shadow.panel {
+  height: 15em;
+}
 .css3-shadow.panel {
   background: #fff;
 }
@@ -42,12 +45,15 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
     background: $body-bg;
     display: inline-block;
     margin-bottom: 35px;
-    text-align: center;
     position: relative;
     -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
 }
-#faqs .panel-body:hover {
+#faqs a:hover {
   box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
+}
+#faqs > table td[class*="col-"], table th[class*="col-"] {
+  position: relative;
+  text-align: center;
 }
 /*==================================================
  * Drop shadow effect with box-shadow
@@ -66,13 +72,16 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
     -moz-border-radius:100%;
     border-radius:100%;
 }
-.brand {
+.title {
   font-size: 3em;
   text-align: center;
 }
-header .title {
+header {
   color: white;
   font-size:1.5em;
+}
+.title {
+  text-align: center;
 }
 .title a {
   padding-top: 15px;
@@ -83,6 +92,12 @@ header .title {
 }
 .panel-body a:hover {
   text-decoration: none;
+}
+.panel:hover {
+    background: #eee;
+}
+.panel h2 {
+    overflow: hidden;
 }
 a:hover, a:focus {
   text-decoration: none;
@@ -95,14 +110,8 @@ a:hover, a:focus {
 nav ul {
   list-style-type: none;
 }
-#faqs > table td[class*="col-"], table th[class*="col-"] {
-  position: relative;
-}
 a {
   color: black;
-}
-.panel:hover {
-    background: #eee;
 }
 .btn-default:hover {
   background-image: $header-background-image;
