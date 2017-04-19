@@ -9,7 +9,7 @@ $header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %
 }
 @font-face {
     font-family: Nocturno;
-    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %});
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %}) format(‘svg’);
 }
 @font-face {
     font-family: Karla;
