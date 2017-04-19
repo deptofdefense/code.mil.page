@@ -18,7 +18,7 @@ $header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %
 body {
   font-family: Nocturno;
 }
-h1,h2,h3,h4 {
+h1,h2,h3,h4,button{
   font-family: Karla;
 }
 #toggleMenu:not(.collapsed){
@@ -28,7 +28,7 @@ h1,h2,h3,h4 {
 #toggleMenu{
   background-color: $body-bg;
   position: absolute;
-  left: 5%;
+  text-align: left;
   top: 1em;
   z-index: 2;
 }
@@ -38,16 +38,22 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
 #repos .css3-shadow.panel {
   height: 15em;
 }
+#repos h2 {
+  margin-top:0;
+}
 .css3-shadow.panel {
   background: #fff;
 }
  .css3-shadow{
     background: $body-bg;
     display: inline-block;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     position: relative;
     -webkit-box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
     box-shadow:0 1px 4px -4px rgba(0, 0, 0, 0.3);
+}
+#faqs .panel-body {
+  padding-top: 0px;
 }
 #faqs > table a:hover div {
   box-shadow: 0 4px 10px 0 rgba(83,107,120,0.50);
@@ -119,10 +125,6 @@ a {
   color: white;
 }
 
-
-section > .btn {
-    margin-bottom: initial;
-}
 #navbar nav {
   padding: 3em 3em 3em;
 }
@@ -136,4 +138,7 @@ section > .btn {
 .navbar-default {
   background-image: $header-background-image;
   line-height: 2.5em;
+}
+section.row {
+  margin-bottom: 35px;
 }
