@@ -183,14 +183,16 @@ Please see [our GitHub project page](https://github.com/deptofdefense/code.mil/)
 
 <script>
 // TODO: Example of a search
+/*
 var xhr = new XMLHttpRequest();
 xhr.responseType = 'json';
 
 xhr.open('GET', 'https://api.github.com/search/repositories?q=topic%3Acode-mil%20pushed%3A%3E2017-03-01&sort=stars&order=desc');
 xhr.onload = function() {
   // TODO: Commenting out for now.
-  // document.body.appendChild(tmpTable);
+  // document.body.appendChild(xhr.response);
 };
-// xhr.send();
+ xhr.send();
+*/
 
 </script>
