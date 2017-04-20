@@ -148,6 +148,7 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 </div>
 </section>
 
+
 <script>
 // TODO: Example of a search
 /*
