@@ -1,0 +1,33 @@
+<!-- include footer -->
+<section class="container">
+  <div class="col-sm-4 panel css3-shadow text-center" >
+    <h3>Defense Digital Service</h3>
+    <p>
+      <a href="https://twitter.com/DefenseDigital" title="Twitter.com">
+        <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/twitter-64.png %}" alt="Twitter.com" width="48px" /> </span>
+      </a>
+    </p>
+    <p>
+      <a href="https://medium.com/@DefenseDigitalService" title="Medium.com">
+        <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/medium-64.png %}" alt="Medium.com" width="48px" /> </span>
+      </a>
+    </p>
+      <a href="https://github.com/deptofdefense/" title="Github.com">
+        <span><img src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/github-64.png %}" alt="Github.com" width="48px" /> </span>
+      </a>
+    </p>
+  </div>
+  <div class="col-sm-4">
+    <a href="https://dds.mil" title="DDS.mil">
+      <img class="img-responsive center-block" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/dds.png %}" alt="DDS.mil" />
+    </a>
+  </div>
+  <div class="col-sm-4 panel css3-shadow text-center">
+    <h3>Contact us</h3>
+    <span class="glyphicon glyphicon-envelope" style="color: #b22;font-size: 24px;" aria-hidden="true"></span>
+    <p><address>Defense Digital Service<br>9010 Defense Pentagon<br>Washington, DC 20301</address></p>
+    <span class="glyphicon glyphicon-inbox" style="color: #369;font-size: 24px;" aria-hidden="true"></span>
+    <p><a href="mailto:feedback@dds.mil" title="Send Email">feedback@dds.mil</a></p>
+  </div>
+</section>
+<!-- end footer -->

@@ -1,0 +1,40 @@
+<!-- include faq/script -->
+<script>
+    $(document).ready(function(){
+      $('.collapse_all').hide();
+      $('.expand_all').on('click', function () {
+        $('#FAQ_Code .collapse').collapse('show');
+        //$('.faq_actions').toggle();
+        $('.expand_all').hide();
+        $('.collapse_all').show();
+        $( "h4 span.glyphicon" ).removeClass( "glyphicon-plus-sign" );
+        $( "h4 span.glyphicon" ).addClass( "glyphicon-minus-sign" );
+      });
+      $('.collapse_all').on('click', function () {
+        $('#FAQ_Code .collapse').collapse('hide');
+        //$('.faq_actions').toggle();
+        $('.collapse_all').hide();
+        $('.expand_all').show();
+        $( "h4 span.glyphicon" ).addClass( "glyphicon-plus-sign" );
+        $( "h4 span.glyphicon" ).removeClass( "glyphicon-minus-sign" );
+      });
+      $('.collapse_switch').on('click', function () {
+        var id = $(this).closest("div").attr("id");
+        $("#" + id + " .glyphicon").toggleClass("glyphicon-plus-sign");
+        $("#" + id + " .glyphicon").toggleClass("glyphicon-minus-sign");
+        var plus = $('.glyphicon-plus-sign').length;
+        if(plus == 0){
+          $(".expand_all").hide();
+        } else {
+          $(".expand_all").show();
+        }
+        var minus = $('.glyphicon-minus-sign').length;
+        if(minus == 0){
+          $(".collapse_all").hide();
+        } else {
+          $(".collapse_all").show();
+        }
+      });
+    });
+</script>
+<!-- end faq/script -->

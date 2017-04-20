@@ -1,0 +1,12 @@
+<!-- include govBanner/script -->
+<script>
+  function toggleBanner(){
+    var tmp=document.getElementById('govBanner');
+    !tmp.getAttribute('hidden') ? tmp.setAttribute('hidden',true) : tmp.removeAttribute('hidden');
+    tmp=document.getElementById('headerIcon');
+    tmp.classList.toggle("glyphicon-menu-down");
+    tmp.classList.toggle("glyphicon-menu-up");
+    event.preventDefault();
+  }
+</script>
+<!-- end govBanner/script -->
