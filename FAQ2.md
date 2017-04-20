@@ -9,33 +9,78 @@ $(document).ready(function(){
   $('.collapse_all').hide();
   $('.expand_all').on('click', function () {
     $('#FAQ_Code .collapse').collapse('show');
-    $('.faq_actions').toggle();
+    //$('.faq_actions').toggle();
+    $('.expand_all').hide();
+    $('.collapse_all').show();
+    $( "h4 span.glyphicon" ).removeClass( "glyphicon-plus-sign" );
+    $( "h4 span.glyphicon" ).addClass( "glyphicon-minus-sign" );
   });
   $('.collapse_all').on('click', function () {
     $('#FAQ_Code .collapse').collapse('hide');
-    $('.faq_actions').toggle();
+    //$('.faq_actions').toggle();
+    $('.collapse_all').hide();
+    $('.expand_all').show();
+    $( "h4 span.glyphicon" ).addClass( "glyphicon-plus-sign" );
+    $( "h4 span.glyphicon" ).removeClass( "glyphicon-minus-sign" );
+  });
+  $('.collapse_switch').on('click', function () {
+    var id = $(this).closest("div").attr("id");
+    $("#" + id + " .glyphicon").toggleClass("glyphicon-plus-sign");
+    $("#" + id + " .glyphicon").toggleClass("glyphicon-minus-sign");
+    var plus = $('.glyphicon-plus-sign').length;
+    if(plus == 0){
+      $(".expand_all").hide();
+    } else {
+      $(".expand_all").show();
+    }
+    var minus = $('.glyphicon-minus-sign').length;
+    if(minus == 0){
+      $(".collapse_all").hide();
+    } else {
+      $(".collapse_all").show();
+    }
   });
 });
 
 </script>
 
+<style>
+  h4 .glyphicon-plus-sign{
+    color: green;
+    font-size: 10px;
+  }
+  h4 .glyphicon-minus-sign{
+    color: red;
+    font-size: 10px;
+  }
+  .expand_all .glyphicon{
+    font-size: 25px; 
+    color: green;
+  }
+  .collapse_all .glyphicon{
+    font-size: 25px; 
+    color: red;
+    display: hidden;
+  }
+</style>
+
 <div class="container">
   <div class="text-right">
-    <a role="button" class="expand_all faq_actions">
-      Show All
+    <a role="button" class="expand_all faq_actions" title="Show All">
+      <span class="glyphicon glyphicon-plus"> </span>
     </a>
-    <a role="button" class="collapse_all faq_actions">
-      Hide All
+    <a role="button" class="collapse_all faq_actions" title="Hide All">
+      <span class="glyphicon glyphicon-minus"> </span>
     </a>
   </div>
   <div class="panel-group" id="FAQ_Code" aria-multiselectable="true">
 
     <div class="panel css3-shadow">      
       <div class="panel-heading" role="tab" id="FAQ1">
-        <a role="button" data-toggle="collapse" href="#FAQ1a" aria-expanded="true" aria-controls="collapseOne">
-        <h4 class="panel-title text-left">          
-          What is Code.mil?          
-        </h4>
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ1a" aria-expanded="true" aria-controls="collapseOne">
+          <h4 class="panel-title text-left">          
+            <span class="glyphicon glyphicon-plus-sign"> </span> What is Code.mil?          
+          </h4>
         </a>
       </div>      
       <div id="FAQ1a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -60,9 +105,9 @@ This initiative is not intended to set DoD policy, but rather is exploring alter
     </div>
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ2">
-        <a role="button" data-toggle="collapse" href="#FAQ2a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ2a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            Who is behind Code.mil?
+            <span class="glyphicon glyphicon-plus-sign"> </span> Who is behind Code.mil?
           </h4>
         </a>
       </div>
@@ -79,9 +124,9 @@ The [Defense Digital Service](https://dds.mil) (DDS) launched Code.mil on Februa
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ3">
-        <a role="button" data-toggle="collapse" href="#FAQ3a" aria-expanded="true" aria-controls="collapseOne">           
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ3a" aria-expanded="true" aria-controls="collapseOne">           
           <h4 class="panel-title">
-            Who has been involved with Code.mil?
+            <span class="glyphicon glyphicon-plus-sign"> </span> Who has been involved with Code.mil?
           </h4>
         </a>
       </div>
@@ -98,9 +143,9 @@ DDS has collaborated extensively with organizations in the open source and free 
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ4">
-        <a role="button" data-toggle="collapse" href="#FAQ4a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ4a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">  
-            How does Code.mil relate to Code.gov?
+            <span class="glyphicon glyphicon-plus-sign"> </span> How does Code.mil relate to Code.gov?
           </h4>
         </a>
       </div>
@@ -117,9 +162,9 @@ We launched Code.mil to further the mission of [Code.gov](https://code.gov) with
     
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ5">
-        <a role="button" data-toggle="collapse" href="#FAQ5a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ5a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            Why is DoD doing this?
+            <span class="glyphicon glyphicon-plus-sign"> </span> Why is DoD doing this?
           </h4>
         </a>
       </div>
@@ -138,9 +183,9 @@ Modern software is open sourced software. The creative contribution of individua
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ6">
-        <a role="button" data-toggle="collapse" href="#FAQ6a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ6a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            I am part of DoD or a Military Department and want to have my project hosted on Code.mil. What do I do?
+            <span class="glyphicon glyphicon-plus-sign"> </span> I am part of DoD or a Military Department and want to have my project hosted on Code.mil. What do I do?
           </h4>
         </a>
       </div>
@@ -157,9 +202,9 @@ That's awesome! Please contact us at code@dds.mil so we can start talking. Two s
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ7">
-        <a role="button" data-toggle="collapse" href="#FAQ7a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ7a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            How are you attaching licenses to your projects? Are they just public domain?
+            <span class="glyphicon glyphicon-plus-sign"> </span> How are you attaching licenses to your projects? Are they just public domain?
           </h4>
         </a>
       </div>
@@ -178,9 +223,9 @@ The updated strategy in [`INTENT.md`](https://github.com/deptofdefense/code.mil/
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ8">
-        <a role="button" data-toggle="collapse" href="#FAQ8a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ8a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            Why not just put Government-written code in the public domain and use CC0 1.0 Universal for copyrighted contributions and jurisdictions where you have copyright?
+            <span class="glyphicon glyphicon-plus-sign"> </span> Why not just put Government-written code in the public domain and use CC0 1.0 Universal for copyrighted contributions and jurisdictions where you have copyright?
           </h4>
         </a>
       </div>
@@ -199,9 +244,9 @@ Intelligent minds will differ on the "best" avenue for a U.S. Federal government
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ9">
-        <a role="button" data-toggle="collapse" href="#FAQ9a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ9a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            How are you handling code contributions?
+            <span class="glyphicon glyphicon-plus-sign"> </span> How are you handling code contributions?
           </h4>
         </a>
       </div>
@@ -222,9 +267,9 @@ Ultimately this is just a recommendation; a project's owner, maintainer, or orga
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ10">
-        <a role="button" data-toggle="collapse" href="#FAQ10a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ10a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            What is the liability of a contributor?
+            <span class="glyphicon glyphicon-plus-sign"> </span> What is the liability of a contributor?
           </h4>
         </a>
       </div>
@@ -241,9 +286,9 @@ Under the DCO, a contribution is submitted under the open source license associa
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ11">
-        <a role="button" data-toggle="collapse" href="#FAQ11a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ11a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            What do I need to know if I fork a project?
+            <span class="glyphicon glyphicon-plus-sign"> </span> What do I need to know if I fork a project?
           </h4>
         </a>
       </div>
@@ -263,9 +308,9 @@ What you need to do if you fork a project depends on the status of the project a
 
     <div class="panel css3-shadow">
       <div class="panel-heading" role="tab" id="FAQ12">
-        <a role="button" data-toggle="collapse" href="#FAQ12a" aria-expanded="true" aria-controls="collapseOne">
+        <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ12a" aria-expanded="true" aria-controls="collapseOne">
           <h4 class="panel-title">
-            Is DoD trying to do something funny here?
+            <span class="glyphicon glyphicon-plus-sign"> </span> Is DoD trying to do something funny here?
           </h4>
         </a>
       </div>
