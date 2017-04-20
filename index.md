@@ -4,7 +4,10 @@ layout: default
 ---
 
 <section class="row">
-  <div class="col-sm-6 col-sm-offset-4">
+  <div class="col-sm-2 col-sm-offset-2">
+    <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/birdplaceholder.png %}" alt="DDS.mil" />
+  </div>
+  <div class="col-sm-6">
     <h4>Code.mil supports <strong>free and open source software development</strong> at the U.S. Department of Defense (DoD). The objective is to produce <strong>better software</strong> for the DoD, the nation, and the world, through <strong> community software development </strong>.</h4>
   </div>
 </section>

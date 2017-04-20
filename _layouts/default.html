@@ -108,7 +108,7 @@
       </div>
       <div class="col-sm-4">
         <a href="https://dds.mil" title="DDS.mil">
-          <img class="img-responsive" src="https://www.dds.mil/img/layout/logo-desktop-full.png" alt="DDS.mil" />
+          <img class="img-responsive center-block" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/dds.png %}" alt="DDS.mil" />
         </a>
       </div>
       <div class="col-sm-4 panel css3-shadow text-center">
