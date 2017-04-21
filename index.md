@@ -126,14 +126,15 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 
 <section class="row" id="news">
 <div class="col-sm-6">
-<h2>Recent blog posts</h2>
+<h2>blog.code.mil</h2>
 {% for post in site.posts %}
   <div class="panel css3-shadow col-sm-12">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h2>
-     <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
+    <div class="panel-body">
+      <h4>
+      <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+      </h4>
+      {{ post.excerpt }}
+    </div>
   </div>
 {% endfor %}
 </div>
@@ -141,11 +142,12 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 <h2>In the News</h2>
 {% for post in site.news %}
   <div class="panel css3-shadow col-sm-12">
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span>{{ post.date | date: date_format }}</span>
-    <h2>
-     <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
-    </h2>
+    <div class="panel-body">
+      <h4>
+      <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+      </h4>
+      {{ post.excerpt }}
+    </div>
   </div>
   {% endfor %}
 </div>
