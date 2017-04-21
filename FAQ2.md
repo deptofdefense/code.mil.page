@@ -3,7 +3,6 @@ title: Frequently Asked Questions (FAQs)
 layout: faq
 ---
 
-{% include pageHeader.html %}
 <div class="panel css3-shadow">      
   <div class="panel-heading" role="tab" id="FAQ1">
     <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ1a" aria-expanded="true" aria-controls="collapseOne">
