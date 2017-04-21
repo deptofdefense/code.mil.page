@@ -7,28 +7,28 @@
         //$('.faq_actions').toggle();
         $('.expand_all').hide();
         $('.collapse_all').show();
-        $( "h4 span.glyphicon" ).removeClass( "glyphicon-plus-sign" );
-        $( "h4 span.glyphicon" ).addClass( "glyphicon-minus-sign" );
+        $( ".collapse_switch span.glyphicon" ).removeClass( "glyphicon-triangle-bottom" );
+        $( ".collapse_switch span.glyphicon" ).addClass( "glyphicon-triangle-top" );
       });
       $('.collapse_all').on('click', function () {
         $('#FAQ_Code .collapse').collapse('hide');
         //$('.faq_actions').toggle();
         $('.collapse_all').hide();
         $('.expand_all').show();
-        $( "h4 span.glyphicon" ).addClass( "glyphicon-plus-sign" );
-        $( "h4 span.glyphicon" ).removeClass( "glyphicon-minus-sign" );
+        $( ".collapse_switch span.glyphicon" ).addClass( "glyphicon-triangle-bottom" );
+        $( ".collapse_switch span.glyphicon" ).removeClass( "glyphicon-triangle-top" );
       });
       $('.collapse_switch').on('click', function () {
         var id = $(this).closest("div").attr("id");
-        $("#" + id + " .glyphicon").toggleClass("glyphicon-plus-sign");
-        $("#" + id + " .glyphicon").toggleClass("glyphicon-minus-sign");
-        var plus = $('.glyphicon-plus-sign').length;
+        $("#" + id + " .glyphicon").toggleClass("glyphicon-triangle-bottom");
+        $("#" + id + " .glyphicon").toggleClass("glyphicon-triangle-top");
+        var plus = $('.glyphicon-triangle-bottom').length;
         if(plus == 0){
           $(".expand_all").hide();
         } else {
           $(".expand_all").show();
         }
-        var minus = $('.glyphicon-minus-sign').length;
+        var minus = $('.glyphicon-triangle-top').length;
         if(minus == 0){
           $(".collapse_all").hide();
         } else {

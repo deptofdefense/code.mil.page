@@ -11,21 +11,21 @@
     {% include govBanner/script.html %}
     {% include faq/script.html %}
     <style>
-        h4 .glyphicon-plus-sign{
-          color: green;
-          font-size: 10px;
+        .collapse_switch .glyphicon-triangle-bottom {
+          color: #55616f;
+          font-size: 19px;
         }
-        h4 .glyphicon-minus-sign{
-          color: red;
-          font-size: 10px;
+        .collapse_switch .glyphicon-triangle-top {
+          color: r#55616f;
+          font-size: 19px;
         }
-        .expand_all .glyphicon{
+        .expand_all .glyphicon {
           font-size: 25px; 
-          color: green;
+          color: #55616f;
         }
-        .collapse_all .glyphicon{
+        .collapse_all .glyphicon {
           font-size: 25px; 
-          color: red;
+          color: #55616f;
           display: hidden;
         }
     </style>
@@ -40,10 +40,12 @@
       <div class="container">
         <div class="text-right">
           <a role="button" class="expand_all faq_actions" title="Show All">
-            <span class="glyphicon glyphicon-plus"> </span>
-          </a>
+            <!-- <span class="glyphicon glyphicon-triangle-bottom"> </span> -->
+            Show All
+          </a><br />
           <a role="button" class="collapse_all faq_actions" title="Hide All">
-            <span class="glyphicon glyphicon-minus"> </span>
+            <!-- <span class="glyphicon glyphicon-triangle-top"> </span> -->
+            Hide All 
           </a>
         </div>
         <div class="panel-group" id="FAQ_Code" aria-multiselectable="true">
