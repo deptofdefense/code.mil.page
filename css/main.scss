@@ -42,8 +42,13 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
   margin-top:0;
   font-family: Nocturno;
 }
-#news h2, #news h4 {
+h1.heading, #news h2, #news h4 {
   font-family: Nocturno;
+}
+h1.heading {
+  font-size: 32px;
+  text-align: center;
+  color: #555b6e;
 }
 #news h2 {
   font-size: 32px;
@@ -121,9 +126,13 @@ header {
 .title a {
   padding-top: 15px;
   padding-bottom: 5px;
+  font-size: 52px;
+  text-align: center;
+  color: #555b6e;
 }
 .title a:hover {
   text-decoration: none;
+  color: #555b6e;
 }
 .panel-body a:hover {
   text-decoration: none;
@@ -179,6 +188,6 @@ section.row {
 }
 .footer {
   width: 100%;
-  height: 356px;
+  height: 250px;
   background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/textured_background.png %}");
 }
