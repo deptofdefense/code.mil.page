@@ -1,12 +1,10 @@
 ---
-title: Projects
+title: The DoD OSS Directory
 layout: default
 ---
 
+{% include pageHeader.html %}
 <section class="container">
-  <div class="row">
-    <div class="text-center title">The DoD OSS Directory</div>
-  </div>
   <div class="row">
     <div class="col-sm-6 col-sm-offset-2">
       <h4>Code.mil supports <strong>free and open source software development</strong> at the U.S. Department of Defense (DoD). The objective is to produce <strong>better software</strong> for the DoD, the nation, and the world, through <strong> community software development </strong>.</h4>

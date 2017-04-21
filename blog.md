@@ -19,6 +19,7 @@ layout: default
   
 }
 </style>
+{% include pageHeader.html %}
 {% for post in site.posts %}
 <section class="row">
   <div class="col-sm-12 panel css3-shadow">    

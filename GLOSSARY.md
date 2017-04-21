@@ -1,12 +1,13 @@
 ---
 title: Glossary
+layout: default
 ---
 
+{% include pageHeader.html %}
 <section class="container">
     <div class="panel panel-default css3-shadow">
         <div class="panel-body text-left" markdown="1">
 
-# Glossary
 
 **Cooperative Research and
 Development Agreement (CRADA)** An agreement between a Government agency and a

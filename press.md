@@ -1,7 +1,9 @@
 ---
 title: Press
+layout: default
 ---
 
+{% include pageHeader.html %}
 {% for press in site.news %}
 <section class="row">
   <div class="col-sm-12 panel css3-shadow">    
