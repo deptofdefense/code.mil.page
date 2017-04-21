@@ -117,14 +117,14 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 </script>
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
     <div class="col-sm-6">
-        <a href="https://github.com/{{repo}}" class="col-sm-12 panel panel-default css3-shadow">
+        <a href="https://github.com/{{repo}}" class="col-sm-12 panel css3-shadow">
             <script>updateRepo("{{repo}}");</script>
         </a>
     </div>
 {% endfor %}
 </section>
 
-<section class="row">
+<section class="row" id="news">
 <div class="col-sm-6">
 <h2>Recent blog posts</h2>
 {% for post in site.posts %}
