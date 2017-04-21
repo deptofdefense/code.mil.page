@@ -7,7 +7,7 @@ layout: default
 <section class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-2">
-      <h4>Code.mil supports <strong>free and open source software development</strong> at the U.S. Department of Defense (DoD). The objective is to produce <strong>better software</strong> for the DoD, the nation, and the world, through <strong> community software development </strong>.</h4>
+      <h4>Code.mil collects and catalogs the years of open source software development around National Security and Defense. Is there a project here that we missed, or that you want to share?</h4>
     </div>
     <div class="col-sm-2">
       <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/birdplaceholder.png %}" alt="DDS.mil" style="transform: scaleX(-1);" />
