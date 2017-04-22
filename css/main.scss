@@ -9,11 +9,11 @@ $header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %
 }
 @font-face {
     font-family: Nocturno, serif;
-    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/Nocturno, serifDisplay-Reg.ttf %}) format(‘svg’);
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %}) format(‘svg’);
 }
 @font-face {
     font-family: Karla, sans-serif;
-    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/karla/Karla, sans-serif-Regular.ttf %});
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/karla/Karla-Regular.ttf %});
 }
 body {
   font-family: Nocturno, serif;
