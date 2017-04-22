@@ -1,0 +1,22 @@
+{% for faq in page.faqs %}
+<div class="panel css3-shadow">
+  <div class="panel-heading" role="tab" id="FAQ{{ forloop.index }}">
+    <a class="collapse_switch" role="button" data-toggle="collapse" href="#FAQ{{ forloop.index}}a" aria-expanded="true" aria-controls="collapseOne">
+      <div>
+        <h4 class="panel-title pull-left">
+          {{ faq.question }}
+        </h4>
+        <span class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
+        <br class="clearfix">
+      </div>
+    </a>
+  </div>
+  <div id="FAQ{{ forloop.index }}a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+      <section>
+        {{ faq.answer | markdownify }}
+      </section>
+    </div>
+  </div>
+</div>
+{% endfor %}
