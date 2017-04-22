@@ -1,6 +1,7 @@
 <!-- include faq/script -->
 <script>
     $(document).ready(function(){
+      $('#separator').hide();
       $('.collapse_all').hide();
       $('.expand_all').on('click', function () {
         $('#FAQ_Code .collapse').collapse('show');
@@ -33,6 +34,11 @@
           $(".collapse_all").hide();
         } else {
           $(".collapse_all").show();
+        }
+        if(minus * plus == 0){ // If either are zero
+          $('#separator').hide();
+        } else {
+          $('#separator').show();
         }
       });
     });
