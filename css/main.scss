@@ -8,18 +8,18 @@ $header-background-image: url("{% if jekyll.environment == 'staging' %}{% else %
   background-image: $header-background-image;
 }
 @font-face {
-    font-family: Nocturno;
-    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/NocturnoDisplay-Reg.ttf %}) format(‘svg’);
+    font-family: Nocturno, serif;
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/Nocturno, serifDisplay-Reg.ttf %}) format(‘svg’);
 }
 @font-face {
-    font-family: Karla;
-    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/karla/Karla-Regular.ttf %});
+    font-family: Karla, sans-serif;
+    src: url({% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link css/karla/Karla, sans-serif-Regular.ttf %});
 }
 body {
-  font-family: Nocturno;
+  font-family: Nocturno, serif;
 }
 h1,h2,h3,h4,button{
-  font-family: Karla;
+  font-family: Karla, sans-serif;
 }
 #toggleMenu:not(.collapsed){
   background: transparent;
@@ -40,10 +40,10 @@ http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-an
 }
 #repos h2 {
   margin-top:0;
-  font-family: Nocturno;
+  font-family: Nocturno, serif;
 }
 h1.heading, #news h2, #news h4 {
-  font-family: Nocturno;
+  font-family: Nocturno, serif;
 }
 h1.heading {
   font-size: 32px;
@@ -75,7 +75,7 @@ h1.heading {
 }
 #faqs .panel-body {
   padding-top: 0px;
-  font-family: Karla;
+  font-family: Karla, sans-serif;
 }
 #faqs > table a:hover div {
   color: #000000;
@@ -138,7 +138,7 @@ header {
   text-decoration: none;
 }
 .panel-body {
-  font-family: Karla;
+  font-family: Karla, sans-serif;
 }
 .panel:hover {
     background: #eee;
