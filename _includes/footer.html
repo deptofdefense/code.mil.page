@@ -1,10 +1,21 @@
 <!-- include footer -->
-<div class="container footer">
-  <div class="col-sm-8 col-sm-offset-2">
-    <p>About</p>
-    <p>Primer</p>
-    <p>About</p>
-    <p>Primer</p>
+<div class="footer">
+  <div class="container">
+    <div class="col-sm-3">
+      <p>code.mil</p>
+    </div>
+    <div class="col-sm-3">
+      <p>The Primer</p>
+    </div>
+    <div class="col-sm-2">
+      <p>About</p>
+    </div>
+    <div class="col-sm-2">
+      <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/dds.png %}"></img>
+    </div>
+    <div class="col-sm-2">
+      <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/dod.png %}"></img>
+    </div>
   </div>
 </div>
 <!-- end footer -->
