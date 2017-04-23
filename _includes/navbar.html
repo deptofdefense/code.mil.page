@@ -13,11 +13,27 @@
         <li>
           <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">About</a>
         </li>
-        <li>The Primer</li>
+        <li>
+          <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link FAQ.md %}">
+            The Primer
+          </a>
+        </li>
         <ul>
-          <li>For DOD Employees</li>
-          <li>For Citizens</li>
-          <li>For press + legal</li>
+          <li>
+            <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _faqs/dod.md %}">
+              For DOD Employees
+            </a>
+          </li>
+          <li>
+            <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _faqs/civ.md %}">
+              For Citizens
+            </a>
+          </li>
+          <li>
+            <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _faqs/other.md %}">
+              For press + legal
+            </a>
+          </li>
         </ul>
       </ul>
     </div>

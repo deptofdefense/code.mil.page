@@ -194,3 +194,6 @@ section.row {
   height: 250px;
   background-image: url("{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/textured_background.png %}");
 }
+.footer a {
+  color: $body-bg;
+}
