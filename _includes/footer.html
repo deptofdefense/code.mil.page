@@ -1,19 +1,31 @@
 <!-- include footer -->
 <div class="footer">
   <div class="container">
-    <div class="col-sm-3">
-      <p>code.mil</p>
+    <div class="col-sm-3 col-xs-4">
+      <p>
+        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}/">
+          code.mil
+        </a>
+      </p>
     </div>
-    <div class="col-sm-3">
-      <p>The Primer</p>
+    <div class="col-sm-3 col-xs-4">
+      <p>
+        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link FAQ.md %}">
+          The Primer
+        </a>
+      </p>
     </div>
-    <div class="col-sm-2">
-      <p>About</p>
+    <div class="col-sm-2 col-xs-4">
+      <p>
+        <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link about.md %}">
+          About
+        </a>
+      </p>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-2 col-xs-6">
       <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/dds.png %}"></img>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-2 col-xs-6">
       <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{% link _assets/dod.png %}"></img>
     </div>
   </div>

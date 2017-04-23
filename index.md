@@ -50,10 +50,10 @@ layout: default
   <div class="text-center title">The DoD OSS Directory</div>
 
   <div class="col-sm-3 col-sm-offset-3">
-  <button class=" col-sm-12 btn btn-default btn-lg">Submit a Repo</button>
+  <button class=" col-xs-12 btn btn-default btn-lg">Submit a Repo</button>
   </div>
   <div class="col-sm-3">
-  <button class="col-sm-12 btn btn-default btn-lg">View the Catalog</button>
+  <button class="col-xs-12 btn btn-default btn-lg">View the Catalog</button>
   </div>
 </section>
 <section class="row" id="repos">
@@ -116,8 +116,8 @@ function updateRepo(repo){
 value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 </script>
 {% for repo in site.data.projects.GitHubIndividualProjects limit:6 %}
-    <div class="col-sm-6">
-        <a href="https://github.com/{{repo}}" class="col-sm-12 panel css3-shadow">
+    <div class="col-sm-6 col-xs-12">
+        <a href="https://github.com/{{repo}}" class="col-xs-12 panel css3-shadow">
             <script>updateRepo("{{repo}}");</script>
         </a>
     </div>
@@ -128,7 +128,7 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 <div class="col-sm-6">
 <h2>blog.code.mil</h2>
 {% for post in site.posts %}
-  <div class="panel css3-shadow col-sm-12">
+  <div class="panel css3-shadow col-xs-12">
     <div class="panel-body">
       <h4>
       <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
@@ -141,7 +141,7 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 <div class="col-sm-6">
 <h2>In the News</h2>
 {% for post in site.news %}
-  <div class="panel css3-shadow col-sm-12">
+  <div class="panel css3-shadow col-xs-12">
     <div class="panel-body">
       <h4>
       <a href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
