@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<section class="row" id="post">
+  <div class="col-sm-9">
+    <div class="panel css3-shadow col-xs-12">
+      <h2>{{ page.title | escape }}</h2>
+      {% if page.author %}
+      <span>{{ page.author }}</span> - 
+      {% endif %}</p>
+      {{ page.date | date: "%b %-d, %Y" }}        
+      <div class="panel-body">
+        {{ content }}
+        <p>
+          {% for category in page.categories %}
+          <span class="label label-default">{{ category }} </span>
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <h4 class="related">Related</h4> 
+  
+    {% assign maxRelated = 4 %}
+    {% assign minCommonTags =  1 %}
+    {% assign maxRelatedCounter = 0 %}
+
+    {% for post in site.posts %}
+
+      {% assign sameTagCount = 0 %}
+      {% assign commonTags = '' %}
+
+      {% for category in post.categories %}
+        {% if post.url != page.url %}
+          {% if page.categories contains category %}
+            {% assign sameTagCount = sameTagCount | plus: 1 %}
+            {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+            {% assign commonTags = commonTags | append: tagmarkup %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if sameTagCount >= minCommonTags %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="col-xs-12 panel css3-shadow">
+          <div class="panel-body">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.excerpt }}</p>
+            <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+            <p>{{ commonTags }}</p>
+          </div>
+        </a>
+        {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+        {% if maxRelatedCounter >= maxRelated %}
+          {% break %}
+        {% endif %}
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+</section>

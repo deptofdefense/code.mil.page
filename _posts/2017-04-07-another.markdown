@@ -1,5 +1,6 @@
 ---
 title: Another
+layout: post
 date: 2017-04-07 16:51:00 Z
 ---
 

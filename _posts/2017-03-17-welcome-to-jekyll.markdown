@@ -1,5 +1,6 @@
 ---
 title: Welcome to Code.mil!
+layout: post
 date: 2017-03-17 02:22:47 Z
 categories:
 - initial
