@@ -13,7 +13,7 @@ layout: default
   </div>
 </section>
 <section class="row" id="about">    
-  <div class="panel css3-shadow">
+  <div class="panel col-xs-12 css3-shadow">
     <div class="panel-body">
       <h2>Defense Digital Service Recommendations for Open Source DoD Projects</h2>
       <p>
@@ -38,7 +38,7 @@ layout: default
       </ul>
     </div>
   </div>
-  <div class="panel css3-shadow">
+  <div class="panel col-xs-12 css3-shadow">
     <div class="panel-body">
       <h3>This project's goal</h3>
       <p>
@@ -49,7 +49,7 @@ layout: default
       </p>
     </div>
   </div>
-  <div class="panel css3-shadow">
+  <div class="panel  col-xs-12 css3-shadow">
     <div class="panel-body">
       <h3>Get involved</h3>
       <p>
