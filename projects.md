@@ -9,17 +9,17 @@ layout: default
     <div class="col-sm-6 col-sm-offset-2">
       <h4>Code.mil collects and catalogs the years of open source software development around National Security and Defense. Is there a project here that we missed, or that you want to share?</h4>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-2 col-xs-12">
       <img class="img-responsive" src="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl }}{% endif %}{% link _assets/birdplaceholder.png %}" alt="DDS.mil" style="transform: scaleX(-1);" />
     </div>
   </div>
   <div class="row">
     <div class="text-center">
-      <button class="col-sm-2 col-sm-offset-5 btn btn-default btn-lg">Submit a Repo</button>
+      <button class="col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3 btn btn-default btn-lg">Submit a Repo</button>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3 col-xs-2">
       <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Dropdown
@@ -32,7 +32,7 @@ layout: default
         </ul>
       </div>
     </div>
-    <div class="col-sm-3 col-sm-offset-6">
+    <div class="col-sm-3 col-sm-offset-6 col-xs-8 col-xs-offset-2">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search">
         <span class="input-group-btn">
@@ -103,8 +103,8 @@ function updateRepo(repo){
 value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 </script>
 {% for repo in site.data.projects.GitHubIndividualProjects %}
-    <div class="col-sm-6">
-        <a href="https://github.com/{{repo}}" class="col-sm-12 panel css3-shadow">
+    <div class="col-sm-6 col-xs-12">
+        <a href="https://github.com/{{repo}}" class="col-xs-12 panel css3-shadow">
             <script>updateRepo("{{repo}}");</script>
         </a>
     </div>
