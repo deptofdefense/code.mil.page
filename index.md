@@ -129,12 +129,13 @@ value = {{ site.data.projects.GitHubIndividualProjects | jsonify }};
 <h2>blog.code.mil</h2>
 {% for post in site.posts %}
   <div class="panel css3-shadow col-xs-12">
+    <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">
     <div class="panel-body">
       <h4>
-      <a class="post-link" href="{% if jekyll.environment == 'staging' %}{% else %}{{ site.baseurl}}{% endif %}{{ post.url }}">{{ post.title | escape }}</a>
+      {{ post.title | escape }}
       </h4>
       {{ post.excerpt }}
-    </div>
+    </div></a>
   </div>
 {% endfor %}
 </div>
